@@ -1,0 +1,35 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/Section.jsx";
+import ProjectHero from "../../components/ProjectHero.jsx";
+import carousel_spirit from "/Users/nathalia/nathaliatroina/src/assets/projects/SpiritAirlines/carousel_spirit.png";
+import ProjectOverview from "../../components/ProjectOverview.jsx";
+import ResearchBlock from "@/components/ResearchBlock.tsx";
+---
+
+<Layout title="Spirit Air Lines">
+  <main>
+    <ProjectHero
+      title="Spirit Airlines"
+      subtitle="Reducing Friction in the Booking Experience for One of America’s Largest Low-Cost Airlines."
+      year="2025"
+      role="UX Designer, UX Researcher"
+      imageSrc={carousel_spirit.src}
+      imageAlt="Project thumbnail"
+      imageBgColor="bg-primary-500"
+    />
+    <ProjectOverview
+      timeline="3 months"
+      context="Spirit Airlines aims to provide affordable air travel with a user-friendly digital experience. While the app performs reasonably well, there are opportunities for improvement, particularly in areas like flight selection, fee transparency, and personalization. Addressing these aspects could further enhance customer satisfaction and trip planning efficiency."
+      problem="Travelers using Spirit Airlines’ app often face unclear pricing, surprise fees, and an interface that lacks confirmation cues. As a result, they frequently feel the need to go back and double-check selections like dates, luggage, and add-ons slowing the process and increasing frustration."
+      goals={[
+        "Reduce friction and confusion caused by unclear pricing structures.",
+        "Reduce uncertainty.",
+        "Complete reservation without needing to backtrack.",
+        "Streamline the booking process to reduce drop-offs and increase conversions.",
+      ]}
+      process="Desk research, competitive analysis, survey, interview, heuristic analysis, JTBD, HMW, MoSCoW method, Card sorting, hypothesis statement, journey map, user testing, A/B testing."
+      tools={["Figma", "Maze", "Kasort", "Meet"]}
+    />
+  </main>
+</Layout>

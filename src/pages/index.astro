@@ -1,11 +1,124 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.jsx";
+import { Button } from "@/components/ui/Button";
+import Section from "@/components/Section";
+import Footer from "@/components/Footer.jsx";
+
+import {
+  TypographyH1,
+  TypographyH2,
+  TypographyH3,
+  TypographyP,
+} from "../components/ui/Typography.jsx";
+
+import ProjectCard from "../components/ProjectCard.jsx";
+import cicloMockup from "@/assets/projects/ciclo/ciclo-mockup.png";
+import stars from "@/assets/stars.png";
+import design_system from "@/assets/projects/designsystem/design_system.png";
+import realestate_hero from "@/assets/projects/realestate/realestate_hero.png";
+import ultrahuman_mockup from "@/assets/projects/Ultrahuman/ultrahuman_mockup.png";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+let projectCardsList = [
+  {
+    title: "Ultrahuman",
+    description: "UI/UX Design • 2025",
+    content: "Transforming complex health data into actionable insights.",
+    badgesList: ["UX Design", "Wearables"],
+    imageSrc: ultrahuman_mockup.src,
+    imageAlt: "Project thumbnail",
+    imageBgColor: "bg-secondary-500",
+    projectUrl: "./projects/ultrahuman",
+  },
+  {
+    title: "Design System",
+    description: "Web Development",
+    content: "A scalable design system built for high-performance.",
+    badgesList: ["UI foundations", "Tokens", "Scalability"],
+    imageSrc: design_system.src,
+    imageAlt: "Project thumbnail",
+    imageBgColor: "bg-tertiary-500",
+    projectUrl: "./projects/designsystem",
+  },
+  {
+    title: "Period Tracker",
+    description: "Mobile App",
+    content: "Balancing business constraints with the ideal user experience.",
+    badgesList: ["Innovation", "MVP", "Branding"],
+    imageSrc: cicloMockup.src,
+    imageAlt: "Project thumbnail",
+    imageBgColor: "bg-primary-500",
+    projectUrl: "./projects/period-tracker",
+  },
+  {
+    title: "Real Estate",
+    description: "Product Strategy",
+    content:
+      "Reducing 60% platform exit points by integrating micro-location data.",
+    badgesList: ["UX Engineer", "UX Research"],
+    imageSrc: realestate_hero.src,
+    imageAlt: "Project thumbnail",
+    imageBgColor: "bg-secondary-500",
+    projectUrl: "./projects/realestate",
+  },
+  {
+    title: "Spirit Airlines",
+    description: "Product Strategy",
+    content: "Strategic approach to enhance company results through design.",
+    badgesList: ["UX Design", "A/B Testing"],
+    imageSrc: "https://placehold.co",
+    imageAlt: "Project thumbnail",
+    imageBgColor: "bg-neutral-500",
+    projectUrl: "./projects/spirit-airlines",
+  },
+];
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Home" scrollTopButton={false}>
+  <!-- Hero section -->
+  <!-- aqui nessa classe eu fiz o "media-query" -->
+  <main class="max-w-7xl mx-auto px-xl">
+    <section class="py-44 relative">
+      <TypographyH1 className="mb-xl"
+        >Hi! I am Nathalia Troina <br /> Product Designer</TypographyH1
+      >
+      <!-- quero aumentar o tamanho do texto para 24px no subtitulo -->
+      <TypographyP variant="large" className="mb-4xl">
+        Combines user‑centered design with technical feasibility to enhance
+        company results. I balance the ideal user experience with business
+        constraints to ensure the best outcomes are achieved.
+      </TypographyP>
+      <Button className="w-44 h-4xl!" href="/about"> Resume </Button>
+      <img
+        src={stars.src}
+        alt="start image"
+        class="absolute bottom-0 right-4 w-24 pointer-events-none"
+      />
+    </section>
+
+    <Section title="Recent Projects">
+      <!-- aspect-video para manter o alinhamento perfeito -->
+      <!-- Grid: 1 coluna no mobile, 2 colunas no desktop -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+        {
+          projectCardsList.map((project) => {
+            return (
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                content={project.content}
+                badgesList={project.badgesList}
+                imageSrc={project.imageSrc}
+                imageAlt={project.imageAlt}
+                imageBgColor={project.imageBgColor}
+                projectUrl={project.projectUrl}
+              />
+            );
+          })
+        }
+      </div>
+    </Section>
+  </main>
 </Layout>

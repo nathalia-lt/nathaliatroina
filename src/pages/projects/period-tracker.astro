@@ -1,0 +1,267 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/Section.jsx";
+import ProjectHero from "../../components/ProjectHero.jsx";
+import carousel_ciclo from "@/assets/projects/ciclo/carousel_ciclo.png";
+import ProjectOverview from "../../components/ProjectOverview.jsx";
+import ResearchBlock from "@/components/ResearchBlock.tsx";
+import ProductPageSection from "@/components/ProductPageSection";
+import InsightsBlock from "@/components/InsightsBlock.tsx";
+import {
+  TypographyList,
+  TypographyH3,
+  TypographyH4,
+  TypographyP,
+} from "@/components/ui/Typography";
+import ImpactSection from "@/components/ImpactSection";
+import SurveyCardsContainer from "@/components/SurveyCardsContainer.jsx";
+import ImageSection from "@/components/ImageSection";
+
+import moscow from "@/assets/projects/Ciclo/moscow.png";
+import informationarchitecture from "@/assets/projects/Ciclo/Information_architecture.png";
+import marketing from "@/assets/projects/Ciclo/marketing.png";
+import onboarding from "@/assets/projects/Ciclo/onboarding.png";
+import calendar from "@/assets/projects/Ciclo/calendar.png";
+import analise from "@/assets/projects/Ciclo/analise.png";
+
+const insightsBlockItems = [
+  {
+    description:
+      "When I'm trying to plan important events or travel, I want to accurately predict my next period, so I can schedule with confidence without having to deal with unexpected menstruation surprises",
+    icon: "rocket",
+  },
+  {
+    description:
+      "When I notice unusual changes in my cycle or symptoms, I want to review my historical period data, so I can identify patterns and share meaningful insights with my healthcare provider without struggling to remember details from months ago.",
+    icon: "rocket",
+  },
+  {
+    description:
+      "When I'm experiencing period symptoms, I want to track their type and intensity, so I can understand my body's patterns without having to maintain multiple separate records or notes.",
+    icon: "rocket",
+  },
+  {
+    description:
+      "When I'm trying to understand my fertility window, I want to see my ovulation predictions, so I can make informed family planning decisions without the stress of manual calculations and guesswork..",
+    icon: "rocket",
+  },
+  {
+    description:
+      "When I'm managing my menstrual supplies, I want to receive timely reminders to stock up, so I can always be prepared without the anxiety of running out of products at critical moments..",
+    icon: "rocket",
+  },
+];
+---
+
+<Layout title="Period Tracker">
+  <main>
+    <ProjectHero
+      title="Period Tracker"
+      subtitle="Pioneering an unconventional period-tracking platform."
+      year="2025"
+      role="UX Designer in collaboration with: Scrum Master, Product Owner and android developers"
+      imageSrc={carousel_ciclo.src}
+    />
+
+    <ProjectOverview
+      timeline="7 months"
+      context="Pipoca Ágil is an innovative initiative designed to empower early-career professionals by providing them with hands-on experience in agile teams. In this project, participants are working on a period tracker app, requested by a key stakeholder. This app is set to enhance women's health tracking and is scheduled for launch in the second half of 2026, initially targeting the Brazilian market."
+      problem="People who menstruate often struggle to keep track of their cycles and related symptoms using traditional methods or overly complex apps. They need a simple, reliable, and accessible way to log and review their menstrual health data so they can better understand their cycles and plan accordingly."
+      goals={[
+        "Enable users to log menstrual cycles, symptoms, and other health data.",
+        "Offer tailored insights about cycles, ovulation, and fertility based on individual data to help users understand their unique patterns.",
+        "Provide customizable notifications for reminders about periods, ovulation windows, or medication schedules.",
+      ]}
+      process="User research, competitive analysis, survey, interviews, JTBD, MoSCoW, user testing."
+      tools={["Figma", "Jira", "Maze"]}
+    />
+
+    <ProductPageSection
+      title="Research"
+      description="The research phase involved a mix of qualitative and quantitative methods to understand user perceptions, preferences, and behaviors. We conducted interviews with 50 individuals from Brazil who menstruate, gathering insights that informed our product design decisions."
+    >
+      <TypographyH3>Key insights we gathered from our research:</TypographyH3>
+      <SurveyCardsContainer
+        cards={[
+          {
+            title: "65.3%",
+            description: "Monitors the menstrual cycle.",
+          },
+          {
+            title: "18.4%",
+            description: "Does not monitor the cycle",
+          },
+          {
+            title: "67.3%",
+            description: "Think it is important to monitor symptoms",
+          },
+          {
+            title: "53.1%",
+            description:
+              "Thinks it is very important to receive notifications.",
+          },
+          {
+            title: "44.9%",
+            description:
+              "Would like notifications to only alert when the period is due.",
+          },
+          {
+            title: "57.3%",
+            description: "Would like to have access to the cycle report.",
+          },
+        ]}
+      />
+    </ProductPageSection>
+
+    <ProductPageSection
+      title="Jobs to be done"
+      description="Understanding users tasks or “jobs” with a product reveals drivers of behaviors, aiding in effective product design for enhanced satisfaction and successes."
+    >
+      <!-- essa div é o container dos cards, aqui vai decidir os gaps -->
+      <div class="flex flex-col gap-md">
+        {
+          insightsBlockItems.map((item) => (
+            <InsightsBlock description={item.description} icon={item.icon} />
+          ))
+        }
+      </div>
+    </ProductPageSection>
+
+    <ProductPageSection>
+      <TypographyH3>MoSCow Method</TypographyH3>
+      <TypographyP>
+        Faced with a flood of feature requests and user needs, the team needed a
+        clear, collaborative way to make sense of what truly mattered. With
+        limited development time and a fast-paced Agile environment, we turned
+        to the MoSCoW method a simple yet powerful prioritization framework that
+        helped us separate the essentials from the nice-to-haves.
+      </TypographyP>
+    </ProductPageSection>
+    <ImageSection src={moscow.src} alt="Meal tracking image" />
+
+    <ProductPageSection>
+      <TypographyH3>Information Architecture</TypographyH3>
+      <TypographyP>
+        It helps organize and scruture content effectively. This ensures users
+        can easily navigate and find information they need, improving their
+        overall experience and satisfaction with the product.
+      </TypographyP>
+      <TypographyH4 className="mt-xl">Results</TypographyH4>
+      <TypographyP
+        >The outcome of this information architecture was a clear and objective
+        structure that ensures scalability for future features without
+        compromising usability or ease of maintenance, allowing for adjustments
+        whenever needed.</TypographyP
+      >
+    </ProductPageSection>
+    <ImageSection src={informationarchitecture.src} alt="Meal tracking image" />
+
+    <ProductPageSection>
+      <TypographyH3>Branding choices & design</TypographyH3>
+      <TypographyP>
+        We picked purple and blue for our brand since they stand out in print
+        ads and <strong>set us apart from competitors</strong>. The logo
+        features a minimalistic line illustration of two symmetrical shapes that
+        resemble butterfly wings, suggest transformation, cycles, and growth,
+        fitting for a product related to personal development and health.
+      </TypographyP>
+    </ProductPageSection>
+    <ImageSection src={marketing.src} alt="Meal tracking image" />
+
+    <ProductPageSection title="MVP">
+      <TypographyH3>Onboarding</TypographyH3>
+      <TypographyP>
+        This flow provides a brief overview of what users can expect in the app.
+        Onboarding that delivers value in less than 60 seconds.
+      </TypographyP>
+    </ProductPageSection>
+    <ImageSection src={onboarding.src} alt="onboarding image" />
+
+    <ProductPageSection>
+      <TypographyH3>Login & Registration</TypographyH3>
+      <TypographyP>
+        Users can log in using their email or Google account. If they are new
+        users, they can register by providing their email and password.
+      </TypographyP>
+      <!-- a list é um prop por isso tem que ficar dentro da tag -->
+      <TypographyList
+        list={[
+          "Smart auto-fill that saves 30 seconds",
+          "Error messages that actually help",
+        ]}
+      />
+    </ProductPageSection>
+    <ImageSection src={onboarding.src} alt="login and registration image" />
+
+    <ProductPageSection>
+      <TypographyH3>Home & Calendar</TypographyH3>
+      <TypographyP>
+        In this flow, users can log their period and symptoms, as well as view
+        their cycle calendar.
+      </TypographyP>
+    </ProductPageSection>
+    <ImageSection src={calendar.src} alt="home and calendar image" />
+
+    <ProductPageSection>
+      <TypographyH3>Cycle Analysis</TypographyH3>
+      <TypographyList
+        list={[
+          "Clearly displays cycle lengths and intervals between periods.",
+          "Ideal for identifying patterns of regularity or irregularity over time.",
+          "Visually highlights the start and end of a menstrual period, allowing easy reading of frequency",
+        ]}
+      />
+    </ProductPageSection>
+    
+      <ImageSection
+        className=""
+        maxWidth="max-w-[300px]"
+        src={analise.src}
+        alt="cycle analysis image"
+      />
+
+      <ImpactSection
+        title="Impact"
+        impacts={[
+          {
+            icon: "user",
+            title: "Enhanced User Experience",
+            description:
+              "The interactive calendar provides users with a more engaging and informative way to track their cycles.",
+          },
+          {
+            icon: "code",
+            title: "Improved Retention:",
+            description:
+              "Driven by faster access to high‑value insights that encouraged consistent daily use.",
+          },
+          {
+            icon: "chart",
+            title: "Improved User Confidence",
+            description:
+              "By presenting predictions and insights clearly, users feel more in control of their health management.",
+          },
+          {
+            icon: "heart",
+            title: "Improved User Confidence",
+            description: "xxxx",
+          },
+        ]}
+        nextSteps={[
+          "Conduct further user testing to gather feedback on the MVP",
+          "Established success metrics (e.g., log completion rate, prediction accuracy) to guide future iteration and track real-world user outcomes.",
+          "Refine the design based on user feedback and testing results.",
+        ]}
+      >
+        <TypographyList
+          list={[
+            "Understanding user needs and preferences is crucial for creating a successful product.",
+            "Collaboration and communication within the team are essential for achieving project goals.",
+            "Iterative design and testing help identify and address usability issues early in the process.",
+            "Agile methodology allows for flexibility and adaptability in the design process",
+          ]}
+        />
+      </ImpactSection>
+    </ProductPageSection>
+  </main>
+</Layout>
