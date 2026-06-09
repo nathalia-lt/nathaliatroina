@@ -2,7 +2,7 @@ import Section from "./Section";
 import { TypographyH4, TypographyP, TypographyList } from "./ui/Typography";
 import {Button} from "@/components/ui/Button";
 
-export default function ProjectOverview({timeline, context, problem, problems={}, goals=[], process, prototypeLabel="", prototypeUrl="", tools=[]}) {
+export default function ProjectOverview({timeline, context, problem, problems={}, goals=[], process, prototypeLabel="", prototypeUrl="", tools=[], methodology=""}) {
   
   return (
     <Section>
@@ -41,6 +41,13 @@ export default function ProjectOverview({timeline, context, problem, problems={}
                 <a href={prototypeUrl} target="_blank" className="">{prototypeLabel}</a>
               </Button>
             </div> 
+          )}
+
+          {methodology && (
+            <>
+              <TypographyH4>Methodology</TypographyH4>
+              <RenderText text={methodology} />
+            </>
           )}
 
           {tools.length > 0 && (

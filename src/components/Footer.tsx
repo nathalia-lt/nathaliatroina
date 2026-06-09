@@ -20,14 +20,14 @@ export default function Footer() {
       label: "LinkedIn"
     },
     {
-      href: "/resume.pdf",
+      href: "/nathaliatroina/nathaliatroinaresume.pdf",
       icon: <IconFileText size={32} stroke={1.5} />,
       label: "Resume"
     }
   ];
 
   return (
-    <footer className="w-full border-t border-neutral-500 bg-neutral-100 ">
+    <footer id="contact" className="w-full border-t border-neutral-500 bg-neutral-100 ">
       <div className=" py-4xl">
         <div className="px-xl max-w-7xl mx-auto flex flex-col items-center gap-3xl md:flex-row md:justify-between">
           
@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-4xl border-t border-neutral-500 pt-xl text-center text-xs text-neutral-500">
+        <div className="my-4xl border-t border-neutral-500 pt-xl text-center text-xs text-neutral-500">
           © {new Date().getFullYear()} Designed and Built by Nathalia Troina — All rights reserved.
         </div>
       </div>

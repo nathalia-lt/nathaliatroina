@@ -12,6 +12,8 @@ import {
   TypographyP,
 } from "../components/ui/Typography.jsx";
 
+import { buttonVariants } from "@/components/ui/Button";
+
 import ProjectCard from "../components/ProjectCard.jsx";
 import cicloMockup from "@/assets/projects/PeriodTracker/ciclo-mockup.png";
 import stars from "@/assets/stars.png";
@@ -30,7 +32,7 @@ let projectCardsList = [
     imageSrc: ultrahuman_mockup.src,
     imageAlt: "Project thumbnail",
     imageBgColor: "bg-secondary-500",
-    projectUrl: "./projects/ultrahuman",
+    projectUrl: "/nathaliatroina/projects/ultrahuman",
   },
   {
     title: "Design System",
@@ -40,7 +42,7 @@ let projectCardsList = [
     imageSrc: design_system.src,
     imageAlt: "Project thumbnail",
     imageBgColor: "bg-tertiary-500",
-    projectUrl: "./projects/designsystem",
+    projectUrl: "/nathaliatroina/projects/designsystem",
   },
   {
     title: "Period Tracker",
@@ -50,7 +52,7 @@ let projectCardsList = [
     imageSrc: cicloMockup.src,
     imageAlt: "Project thumbnail",
     imageBgColor: "bg-primary-500",
-    projectUrl: "./projects/period-tracker",
+    projectUrl: "/nathaliatroina/projects/period-tracker",
   },
   {
     title: "Real Estate",
@@ -61,20 +63,19 @@ let projectCardsList = [
     imageSrc: realestate_hero.src,
     imageAlt: "Project thumbnail",
     imageBgColor: "bg-secondary-500",
-    projectUrl: "./projects/real-estate",
+    projectUrl: "/nathaliatroina/projects/real-estate",
   },
-  {
-    title: "Spirit Airlines",
-    description: "Product Strategy",
-    content: "Strategic approach to enhance company results through design.",
-    badgesList: ["UX Design", "A/B Testing"],
-    imageSrc: "https://placehold.co",
-    imageAlt: "Project thumbnail",
-    imageBgColor: "bg-neutral-500",
-    projectUrl: "./projects/spirit-airlines",
-  },
+  // {
+  //   title: "Spirit Airlines",
+  //   description: "Product Strategy",
+  //   content: "Strategic approach to enhance company results through design.",
+  //   badgesList: ["UX Design", "A/B Testing"],
+  //   imageSrc: "https://placehold.co",
+  //   imageAlt: "Project thumbnail",
+  //   imageBgColor: "bg-neutral-500",
+  //   projectUrl: "/nathaliatroina/projects/spirit-airlines",
+  // },
 ];
-
 ---
 
 <Layout title="Home" scrollTopButton={false}>
@@ -91,7 +92,16 @@ let projectCardsList = [
         company results. I balance the ideal user experience with business
         constraints to ensure the best outcomes are achieved.
       </TypographyP>
-      <Button className="w-44 h-4xl!" href="/about"> Resume </Button>
+      <Button asChild>
+        <a
+          class={buttonVariants({ variant: "default", size: "default" }) +
+            " w-44 h-4xl!"}
+          href="/nathaliatroina/nathaliatroinaresume.pdf"
+          target="_blank"
+        >
+          Resume
+        </a></Button
+      >
       <img
         src={stars.src}
         alt="start image"
