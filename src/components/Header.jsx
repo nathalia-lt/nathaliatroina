@@ -28,7 +28,7 @@ function Header() {
               <NavigationMenuContent >
                   <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/projects/ultrahuman'>Ultrahuman</NavigationMenuLink>
                   <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/projects/design-system'>Design System</NavigationMenuLink>
-                  <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/projects/real-state'>Real Estate</NavigationMenuLink>
+                  <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/projects/real-estate'>Real Estate</NavigationMenuLink>
                   <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/projects/period-tracker'>Period Tracker</NavigationMenuLink>
                   <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/projects/spirit-airlines'>Spirit Airlines</NavigationMenuLink>
               </NavigationMenuContent>

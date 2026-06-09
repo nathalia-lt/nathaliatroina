@@ -59,7 +59,7 @@ const insightsBlockItems = [
       title="Period Tracker"
       subtitle="Pioneering an unconventional period-tracking platform."
       year="2025"
-      role="UX Designer in collaboration with: Scrum Master, Product Owner and android developers"
+      role="UX Designer in collaboration with: Scrum Master, Product Owner and Android Developers"
       imageSrc={carousel_ciclo.src}
     />
 
@@ -168,7 +168,31 @@ const insightsBlockItems = [
     </ProductPageSection>
     <ImageSection src={marketing.src} alt="Meal tracking image" />
 
-    <ProductPageSection title="MVP">
+    <ProductPageSection
+      title="Usability test"
+      description="Testing is a crucial step in the design process, as it allows us to gather feedback from real users and make necessary adjustments before the final product launch. Unmoderated testing was conducted in Maze validating decisions and identifying interface issues to address before the final UI."
+    >
+      <TypographyH3>Tasks Included</TypographyH3>
+      <TypographyList
+      list={[
+      "Log symptoms",
+      "Log period",
+      "Set a period",
+      "Check cycle analysis"  
+      ]}
+      />
+      <TypographyH4>Results</TypographyH4>
+      <TypographyList
+      list={[
+        "Usability Score: 87",
+        "Task Sucess Rate: 92%",
+        "Average task duration: 42 seconds Logging a new period"
+        ]}
+      />
+    </ProductPageSection>
+<!-- nao esta aparecendo -->
+    <ProductPageSection 
+      title="MVP">
       <TypographyH3>Onboarding</TypographyH3>
       <TypographyP>
         This flow provides a brief overview of what users can expect in the app.
@@ -224,13 +248,13 @@ const insightsBlockItems = [
         title="Impact"
         impacts={[
           {
-            icon: "user",
+            icon: "users",
             title: "Enhanced User Experience",
             description:
               "The interactive calendar provides users with a more engaging and informative way to track their cycles.",
           },
           {
-            icon: "code",
+            icon: "trending",
             title: "Improved Retention:",
             description:
               "Driven by faster access to high‑value insights that encouraged consistent daily use.",
@@ -242,9 +266,9 @@ const insightsBlockItems = [
               "By presenting predictions and insights clearly, users feel more in control of their health management.",
           },
           {
-            icon: "heart",
-            title: "Improved User Confidence",
-            description: "xxxx",
+            icon: "code",
+            title: "Hand-off",
+            description: "Reduced implementation iterations by 30% through detailed documentation and clear communication.",
           },
         ]}
         nextSteps={[
@@ -255,7 +279,7 @@ const insightsBlockItems = [
       >
         <TypographyList
           list={[
-            "Understanding user needs and preferences is crucial for creating a successful product.",
+            "Utilizing usability metrics is essential for transforming subjective insights into concrete data, ensuring greater precision when validating design hypotheses.",
             "Collaboration and communication within the team are essential for achieving project goals.",
             "Iterative design and testing help identify and address usability issues early in the process.",
             "Agile methodology allows for flexibility and adaptability in the design process",

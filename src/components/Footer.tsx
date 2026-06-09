@@ -33,7 +33,7 @@ export default function Footer() {
           
           {/* Left side */}
           <div className="text-center md:text-left grow">
-            <TypographyH3>Let's Connect</TypographyH3>
+            <TypographyH3>Let's Connect!</TypographyH3>
             <TypographyP className="max-w-[485px]">
               I am currently looking for opportunities for work and would be happy to collaborate.
             </TypographyP>

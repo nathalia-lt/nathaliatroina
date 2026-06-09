@@ -12,7 +12,7 @@ export default function ScrollTopButton (){
     return(
         <div className="relative m-xl">
             <button 
-                className="w-16 h-16 border-2 rounded-full absolute bottom-4 right-0 flex items-center justify-center bg-primary-100 border-primary-500 cursor-pointer hover:bg-primary-200"
+                className="w-12 h-12 border-2 rounded-full absolute bottom-4 right-0 flex items-center justify-center bg-primary-100 border-primary-500 cursor-pointer hover:bg-primary-200"
                 onClick={scrollToTop}
             >
                 <div className="text-center"><IconChevronUp color="var(--color-primary-500)" stroke={2} /></div>

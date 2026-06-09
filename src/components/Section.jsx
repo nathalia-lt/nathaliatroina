@@ -8,7 +8,9 @@ function Section({ title = "", children, className="" }) {
 
   return (
     <section className={cn(baseClasses, className)} >
-      {title && <TypographyH2 className="mb-2xl">{title}</TypographyH2>}
+      <div className="grid grid grid-cols-12 gap-md">
+        {title && <TypographyH2 className="mb-2xl col-span-5">{title}</TypographyH2>}
+      </div>
       {children}
     </section>
   );

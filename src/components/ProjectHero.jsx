@@ -3,7 +3,7 @@ import { TypographyH1, TypographyP } from "./ui/Typography";
 
 
 
-export default function ProjectHero({title, subtitle, year, role, imageSrc}) {
+export default function ProjectHero({title, subtitle, year, role, imageSrc, imageAlt=""}) {
     return (
         <Section>
             <div className="text-center">

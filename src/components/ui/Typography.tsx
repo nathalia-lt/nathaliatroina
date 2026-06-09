@@ -29,7 +29,7 @@ export function TypographyH2({ children, className }: { children: React.ReactNod
 }
 
 export function TypographyH3({ className, children }: { children: React.ReactNode, className?: string }) {
-  const baseClasses = "scroll-m-20 text-heading-lg font-title font-semibold tracking-tighter leading-none text-neutral-700";
+  const baseClasses = "scroll-m-20 text-heading-lg font-title font-medium tracking-tight leading-none text-neutral-700";
   return (
     <h3 className={cn(baseClasses, className)}>
       {children}
@@ -39,7 +39,7 @@ export function TypographyH3({ className, children }: { children: React.ReactNod
 
 
 export function TypographyH4({ className, children }: { children: React.ReactNode, className?: string }) {
-  const baseClasses = "scroll-m-20 text-heading-md font-title font-semibold tracking-tighter leading-none text-neutral-700";
+  const baseClasses = "scroll-m-20 text-heading-md font-title font-medium tracking-tight leading-none text-neutral-700";
   return (
     <h4 className={cn(baseClasses, className)}>
       {children}
@@ -51,7 +51,7 @@ export function TypographyH4({ className, children }: { children: React.ReactNod
 // tirar o tight do texto princpal e colocar um leading mais solto, tipo 1.5 ou 1.6, colocar 150% de line height (leading-relaxed)
 export function TypographyP({ children, variant, className }: { children: React.ReactNode, variant?: "default" | "large", className?: string }) {
 
-  const baseClasses = "font-body leading-relaxed text-neutral-500 [&:not(:first-child)]:mt-6";
+  const baseClasses = "font-body leading text-neutral-600 [&:not(:first-child)]:mt-6";
 
   const variantClasses = variant === 'large' ? 'text-body-lg' : 'text-body-sm';
 
@@ -64,7 +64,7 @@ export function TypographyP({ children, variant, className }: { children: React.
 
 export function TypographyBlockquote({ children, author }: { children: React.ReactNode, author?: string }) {
   return (
-    <blockquote className=" max-w-[60%] mx-auto mt-6  border-l-2 dark:border-l-yellow-200 py-3 px-2xs italic dark:bg-green-900">
+    <blockquote className=" max-w-[60%] text-neutral-600 mx-auto mt-6  border-l-2 dark:border-l-yellow-200 py-3 px-2xs italic dark:bg-green-900">
       &quot;{children}&quot;
       {author && <div className="text-right">{author}</div>}
     </blockquote>
@@ -73,12 +73,29 @@ export function TypographyBlockquote({ children, author }: { children: React.Rea
 
 export function TypographyList({list, className }: {list: string[]}) {
 
-  const baseClasses = "font-body leading-relaxed text-neutral-500 [&:not(:first-child)]:mt-6 my-6 ml-6 list-disc [&>li]:mt-1";
+  const baseClasses = "font-body  text-neutral-600 [&:not(:first-child)]:mt-6 my-6 ml-6 list-disc [&>li]:mt-1";
 
   return (
     <ul className={cn(baseClasses, className)}>
       {list.map((item, index) => (
         <li key={index}>{item}</li>
+      ))}
+    </ul>
+  )
+
+}
+
+export function TypographyListDescription({list, className }: {list: string[]}) {
+
+  const baseClasses = "font-body  text-neutral-600 [&:not(:first-child)]:mt-6 my-6 ml-6 list-disc [&>li]:mt-1";
+
+  return (
+    <ul className={cn(baseClasses, className)}>
+      {list.map((item, index) => (
+        <li key={index}>
+          <span className="font-bold">{item.title}</span>
+          <div>{item.description}</div>
+        </li>
       ))}
     </ul>
   )

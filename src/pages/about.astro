@@ -1,9 +1,14 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Section from "@/components/Section.jsx";
-import { TypographyH1, TypographyP } from "@/components/ui/Typography";
+import {
+  TypographyH1,
+  TypographyP,
+  TypographyH3,
+} from "@/components/ui/Typography";
 import Footer from "@/components/Footer.jsx";
 import { IconMapPin } from "@tabler/icons-react";
+import ProductPageSection from "@/components/ProductPageSection";
 
 import linkedin_img from "@/assets/About/linkedin_img.png";
 ---
@@ -37,10 +42,29 @@ import linkedin_img from "@/assets/About/linkedin_img.png";
             <IconMapPin />New York City</TypographyP
           >
         </div>
-        <div class="flex-1 ">
+        <div class="flex-1">
           <img src={linkedin_img.src} alt="linkedin image" />
         </div>
       </div>
     </Section>
+
+    <ProductPageSection title="Education">
+      <div class="flex justify-between mb-sm">
+        <TypographyH3><strong>Design Circuit Academy</strong> | Product Design Program</TypographyH3>
+        <TypographyH3>2024</TypographyH3>
+      </div>
+            <div class="flex justify-between mb-sm">
+        <TypographyH3><strong>Flatiron School</strong> | Full Stack Web Development Program</TypographyH3>
+        <TypographyH3>2022</TypographyH3>
+      </div>
+            <div class="flex justify-between mb-sm">
+        <TypographyH3><strong>Instituto de Administração Hospitalar e Ciências da Saúde</strong> | MBA Auditing</TypographyH3>
+        <TypographyH3></TypographyH3>
+      </div>
+      <div class="flex justify-between mb-sm">
+        <TypographyH3><strong>Centro Universitário Metodista IPA</strong> | BS Nursing</TypographyH3>
+        <TypographyH3></TypographyH3>
+      </div>
+    </ProductPageSection>
   </main>
 </Layout>

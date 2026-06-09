@@ -1,8 +1,8 @@
 import Section from "./Section";
 import { TypographyH4, TypographyP, TypographyList } from "./ui/Typography";
+import {Button} from "@/components/ui/Button";
 
-
-export default function ProjectOverview({timeline, context, problem, goals=[], process, prototype="", tools=[]}) {
+export default function ProjectOverview({timeline, context, problem, problems={}, goals=[], process, prototypeLabel="", prototypeUrl="", tools=[]}) {
   
   return (
     <Section>
@@ -17,6 +17,11 @@ export default function ProjectOverview({timeline, context, problem, goals=[], p
 
           <TypographyH4>Problem</TypographyH4>
           <RenderText text={problem} />
+          {problems.length > 0 && <>
+          <div>
+            <TypographyList className="mt-xs mb-xl" list={problems} />
+          </div>
+          </>}
           
         </div>
         {/* coluna 2 */}
@@ -29,11 +34,13 @@ export default function ProjectOverview({timeline, context, problem, goals=[], p
           <TypographyH4>Process</TypographyH4>
           <RenderText text={process} />
 
-          { prototype && (
-            <>
+          { prototypeUrl && (
+            <div className="mb-xl">
               <TypographyH4>Prototype</TypographyH4>
-              <a href={prototype} target="_blank" className="text-blue-500 underline">{prototype}</a>
-            </>
+              <Button variant="link" size="lg" className="px-0 text-body-sm"  asChild>
+                <a href={prototypeUrl} target="_blank" className="">{prototypeLabel}</a>
+              </Button>
+            </div> 
           )}
 
           {tools.length > 0 && (
@@ -52,7 +59,7 @@ const RenderText = ({text}) => {
 
   return (
     <div>
-      <TypographyP className="mt-xs mb-xl">{text}</TypographyP>
+      <TypographyP className="mt-xs mb-xl"><span dangerouslySetInnerHTML={{ __html: text }}></span></TypographyP>
     </div>
   )
 }

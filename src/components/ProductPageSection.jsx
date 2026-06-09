@@ -1,10 +1,14 @@
 import LayoutGrid from "./LayoutGrid";
 import Section from "./Section";
 import {TypographyH2, TypographyH3, TypographyP} from "./ui/Typography";
+import { cn } from "@/lib/utils"
 
-export default function ProductPageSection({ title, description, variant="normal", className = "", children }) {
+
+export default function ProductPageSection({ title, description, variant="normal", className="", sectionClassName = "", children }) {
+  
+
   return (
-    <Section title={title}>
+    <Section title={title} className={sectionClassName}>
       <LayoutGrid>
         <div className="mb-xl">
           {/* essa propriedade dangerouslySetInnerHTML deixa eu renderizar html */}
