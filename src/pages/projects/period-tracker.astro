@@ -21,6 +21,7 @@ import moscow from "@/assets/projects/PeriodTracker/moscow.png";
 import informationarchitecture from "@/assets/projects/PeriodTracker/Information_architecture.png";
 import marketing from "@/assets/projects/PeriodTracker/marketing.png";
 import onboarding from "@/assets/projects/PeriodTracker/onboarding.png";
+import login from "@/assets/projects/PeriodTracker/login_registration.png";
 import calendar from "@/assets/projects/PeriodTracker/calendar.png";
 import analise from "@/assets/projects/PeriodTracker/analise.png";
 
@@ -66,7 +67,8 @@ const insightsBlockItems = [
     <ProjectOverview
       timeline="7 months"
       context="Pipoca Ágil is an innovative initiative designed to empower early-career professionals by providing them with hands-on experience in agile teams. In this project, participants are working on a period tracker app, requested by a key stakeholder. This app is set to enhance women's health tracking and is scheduled for launch in the second half of 2026, initially targeting the Brazilian market."
-      problem="People who menstruate often struggle to keep track of their cycles and related symptoms using traditional methods or overly complex apps. They need a simple, reliable, and accessible way to log and review their menstrual health data so they can better understand their cycles and plan accordingly."
+
+      problem="People who menstruate often <strong> struggle to keep track of their cycles and related symptoms using traditional methods or overly complex apps</strong>. They need a simple, reliable, and accessible way to log and review their menstrual health data so they can better understand their cycles and plan accordingly."
       goals={[
         "Enable users to log menstrual cycles, symptoms, and other health data.",
         "Offer tailored insights about cycles, ovulation, and fertility based on individual data to help users understand their unique patterns.",
@@ -166,7 +168,8 @@ const insightsBlockItems = [
         fitting for a product related to personal development and health.
       </TypographyP>
     </ProductPageSection>
-    <ImageSection src={marketing.src} alt="Meal tracking image" />
+    <ImageSection className=""
+        maxWidth="max-w-[600px]"  src={marketing.src} alt="Meal tracking image" />
 
     <ProductPageSection
       title="Usability test"
@@ -215,7 +218,7 @@ const insightsBlockItems = [
         ]}
       />
     </ProductPageSection>
-    <ImageSection src={onboarding.src} alt="login and registration image" />
+    <ImageSection className=""maxWidth="max-w-[500px]" src={login.src} alt="login and registration image" />
 
     <ProductPageSection>
       <TypographyH3>Home & Calendar</TypographyH3>
@@ -239,7 +242,7 @@ const insightsBlockItems = [
     
       <ImageSection
         className=""
-        maxWidth="max-w-[300px]"
+        maxWidth="max-w-[250px]"
         src={analise.src}
         alt="cycle analysis image"
       />
