@@ -16,7 +16,7 @@ import {
   TypographyH3,
   TypographyP,
   TypographyList,
-  TypographyListDescription
+  TypographyListDescription,
 } from "@/components/ui/Typography";
 import ImpactSection from "@/components/ImpactSection";
 
@@ -72,258 +72,253 @@ const constraintsItems = [
 ---
 
 <Layout title="Ultrahuman">
-  <main>
-    <ProjectHero
-      title="Ultrahuman"
-      subtitle="Transforming complex health data into actionable insights."
-      year="2026"
-      role="UX Designer"
-      imageSrc={heroImage.src}
-    />
+  <ProjectHero
+    title="Ultrahuman"
+    subtitle="Transforming complex health data into actionable insights."
+    year="2026"
+    role="UX Designer"
+    imageSrc={heroImage.src}
+  />
 
-    <ProjectOverview
-      timeline="3 months"
+  <ProjectOverview
+    timeline="3 months"
+    context="The health market, specifically smart rings like ultrahuman, Oura ring, and RingConn, represents a revolution in how we monitor our well-being. However, there is a significant opportunity to adapt and evolve this technology to better meet users' needs and realities."
+    problem="Data Interpretation: We believe users <strong> struggle to understand the practical meaning of the data collected by the ring </strong> because the metrics are presented in a technical and decontextualized manner, resulting in low continuous engagement with the app."
+    goals={[
+      "Design the dashboard with a focus on the practical meaning of the data.",
+      "Implement a layered visualization system (from simple to detailed).",
+      "Improve the meal tracking experience.",
+    ]}
+    process="Desk research, competitive analysis, interview, heuristic analysis, JTBD, HMW, Cost vs benefit matrix, MoSCoW method, hypothesis statement, journey map, moodboard, user testing."
+    prototypeUrl="https://www.figma.com/proto/CkRofEDoXGmv43ouVaAaDH/ultrahuman-case-study?page-id=0%3A1&node-id=486-10574&viewport=349%2C1678%2C0.14&t=mC8nPbK98B4ryYS3-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=486%3A10574"
+    prototypeLabel="View Figma Prototype"
+    tools={["Figma", "Miro"]}
+  />
 
-      context="The health market, specifically smart rings like ultrahuman, Oura ring, and RingConn, represents a revolution in how we monitor our well-being. However, there is a significant opportunity to adapt and evolve this technology to better meet users' needs and realities."
+  <ResearchBlock title="Research" items={researchItems}>
+    <ImageSection src={CompetitorAnalysis.src} alt="Competitive analysis" />
+  </ResearchBlock>
 
-      problem="Data Interpretation: We believe users <strong> struggle to understand the practical meaning of the data collected by the ring </strong> because the metrics are presented in a technical and decontextualized manner, resulting in low continuous engagement with the app."
-      goals={[
-        "Design the dashboard with a focus on the practical meaning of the data.",
-        "Implement a layered visualization system (from simple to detailed).",
-        "Improve the meal tracking experience.",
+  <UserInterviews
+    description="Conducted qualitative interview with 5 individuals who wears wearble, who are health conscius professional and fitness enthusiasts, especially those aged 18-44 year old."
+    quotes={[
+      "I check HRV and sleep stages. It helps me plan my classes and personal practice.",
+      "I log meals sometimes. But it’s hard to find what I’ve logged before, and the interface feels busy.",
+      "when the data feels too technical or does not change much, I lose interest.",
+    ]}
+    findings={[
+      "Users often feel confused by technical metrics like HRV, recovery scores.",
+      "Lack of actionable context makes it hard to know what to do with the data.",
+      "Difficulty finding previously logged meals discourages consistent use.",
+      "Cluttered interface.",
+    ]}
+  />
+
+  <ProductPageSection
+    title="Problem Statement"
+    variant="large"
+    description="How might we translate complex health metrics into meaningful insights that support <mark>user retention</mark> and position the ring as a daily wellness companion?"
+  />
+
+  <!--para os children eu tenho que fechar o component separado  -->
+  <ProductPageSection
+    title="Constraints"
+    description="Redesigning multiple data‑heavy sections of the Ultrahuman M1 mobile experience required working within several constraints that shaped the direction and feasibility of the solutions. These limitations influenced what information could be shown, how it could be structured, and the level of detail that could be surfaced on mobile."
+  >
+    <TypographyList list={constraintsItems} />
+  </ProductPageSection>
+
+  <ProductPageSection
+    title="Product Hypothesis"
+    description="By using product hypothesis, I was able to define my goals and antecipated results with grater clarity. They helped me focus on specific tasks and deepen my understanding of users need."
+  >
+    <!-- essa div é o container dos cards, aqui vai decidir os gaps -->
+    <div class="flex flex-col gap-md">
+      {
+        insightsBlockItems.map((item) => (
+          <InsightsBlock description={item.description} icon={item.icon} />
+        ))
+      }
+    </div>
+  </ProductPageSection>
+
+  <ProductPageSection
+    title="User Journey Map"
+    description="This journey maps how users input and monitor data within the Ultrahuman app, highlighting their actions, difficulties, and pain points, and then correlating these issues with the solutions proposed in earlier stages."
+  >
+    <TypographyH3>Takeaways</TypographyH3>
+    <TypographyP>
+      Based on the user journey map, we identified several key insights that
+      will inform our design decisions.
+    </TypographyP>
+  </ProductPageSection>
+
+  <ImageSection src={journeyMap.src} alt="Current Journey" />
+
+  <ProductPageSection
+    title="Rapid user testing"
+    description="To validate the proposed solutions, I created interactive prototypes and conducted rapid user testing sessions with 5 participants. The main objective was to identify any usability issues related to the prototype’s visual design and interaction flow, and to uncover opportunities for improvement by observing how users interacted with key features."
+  >
+    <TypographyH3>Test objectives</TypographyH3>
+    <TypographyList
+      list={[
+        "Evaluate data comprehension: Assess whether users can understand the health metrics presented in the dashboard.",
+        "Test meal tracking usability: Observe how easily users can log meals, find saved items and interpret calorie information.",
+        "Identify navigation challenges: Determine if users can intuitively move between key sections of the app.",
+        "Uncover opportunities for improvement: Gather feedback on pain points, unclear elements, or missing features that could enhance the overall user experience and engagement.",
       ]}
-      process="Desk research, competitive analysis, interview, heuristic analysis, JTBD, HMW, Cost vs benefit matrix, MoSCoW method, hypothesis statement, journey map, moodboard, user testing."
-      prototypeUrl="https://www.figma.com/proto/CkRofEDoXGmv43ouVaAaDH/ultrahuman-case-study?page-id=0%3A1&node-id=486-10574&viewport=349%2C1678%2C0.14&t=mC8nPbK98B4ryYS3-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=486%3A10574"
-      prototypeLabel="View Figma Prototype"
-      tools={["Figma", "Miro"]}
     />
+  </ProductPageSection>
 
-    <ResearchBlock title="Research" items={researchItems}>
-      <img src={CompetitorAnalysis.src} alt="Competitive analysis" />
-    </ResearchBlock>
-
-    <UserInterviews
-      description="Conducted qualitative interview with 5 individuals who wears wearble, who are health conscius professional and fitness enthusiasts, especially those aged 18-44 year old."
-      quotes={[
-        "I check HRV and sleep stages. It helps me plan my classes and personal practice.",
-        "I log meals sometimes. But it’s hard to find what I’ve logged before, and the interface feels busy.",
-        "when the data feels too technical or does not change much, I lose interest.",
-      ]}
-      findings={[
-        "Users often feel confused by technical metrics like HRV, recovery scores.",
-        "Lack of actionable context makes it hard to know what to do with the data.",
-        "Difficulty finding previously logged meals discourages consistent use.",
-        "Cluttered interface.",
-      ]}
-    />
-
-    <ProductPageSection
-      title="Problem Statement"
-      variant="large"
-      description="How might we translate complex health metrics into meaningful insights that support <mark>user retention</mark> and position the ring as a daily wellness companion?"
-    />
-
-    <!--para os children eu tenho que fechar o component separado  -->
-    <ProductPageSection
-      title="Constraints"
-      description="Redesigning multiple data‑heavy sections of the Ultrahuman M1 mobile experience required working within several constraints that shaped the direction and feasibility of the solutions. These limitations influenced what information could be shown, how it could be structured, and the level of detail that could be surfaced on mobile."
-    >
-      <TypographyList list={constraintsItems} />
-    </ProductPageSection>
-
-    <ProductPageSection
-      title="Product Hypothesis"
-      description="By using product hypothesis, I was able to define my goals and antecipated results with grater clarity. They helped me focus on specific tasks and deepen my understanding of users need."
-    >
-      <!-- essa div é o container dos cards, aqui vai decidir os gaps -->
-      <div class="flex flex-col gap-md">
+  <ProductPageSection
+    title="Addressing usability concerns and users  recommendations"
+    description="Here are some of the key findings from the usability testing:"
+  >
+    <TypographyListDescription
+      list={[
         {
-          insightsBlockItems.map((item) => (
-            <InsightsBlock description={item.description} icon={item.icon} />
-          ))
-        }
-      </div>
-    </ProductPageSection>
-
-    <ProductPageSection
-      title="User Journey Map"
-      description="This journey maps how users input and monitor data within the Ultrahuman app, highlighting their actions, difficulties, and pain points, and then correlating these issues with the solutions proposed in earlier stages."
-    >
-      <TypographyH3>Takeaways</TypographyH3>
-      <TypographyP>
-        Based on the user journey map, we identified several key insights that
-        will inform our design decisions.
-      </TypographyP>
-    </ProductPageSection>
-
-    <ImageSection src={journeyMap.src} alt="Current Journey" />
-
-    <ProductPageSection
-      title="Rapid user testing"
-      description="To validate the proposed solutions, I created interactive prototypes and conducted rapid user testing sessions with 5 participants. The main objective was to identify any usability issues related to the prototype’s visual design and interaction flow, and to uncover opportunities for improvement by observing how users interacted with key features."
-    >
-      <TypographyH3>Test objectives</TypographyH3>
-      <TypographyList
-        list={[
-          "Evaluate data comprehension: Assess whether users can understand the health metrics presented in the dashboard.",
-          "Test meal tracking usability: Observe how easily users can log meals, find saved items and interpret calorie information.",
-          "Identify navigation challenges: Determine if users can intuitively move between key sections of the app.",
-          "Uncover opportunities for improvement: Gather feedback on pain points, unclear elements, or missing features that could enhance the overall user experience and engagement.",
-        ]}
-      />
-    </ProductPageSection>
-
-    <ProductPageSection
-      title="Addressing usability concerns and users  recommendations"
-      description="Here are some of the key findings from the usability testing:"
-    >
-
-      <TypographyListDescription
-        list={[
-          {
-            title: "Issue 1: Users skipped or ignored secondary option on the meal list",
-            description:"Description: During the usability test, participants frequently overlooked secondary options in the meal list, focusing only on the primary choice.",
-          },
-          {
-            title: "Issue 2: Difficulty interpreting the term temp. deviation and its graphic.",
-            description:"Description: When encountering the “temp. deviation” metric, 2 participants hesitated, expressed confusion about its meaning, and struggled to interpret the associated chart.",
-          },
-            {
-            title: "Issue 3: Sleep data visualization challenges",
-            description:"During the usability test, 3 participants hesitated when reading the sleep stages section, pausing to understand what each color or segment represented and struggling to identify the most important information at a glance.",
-          }
-          
-        ]}
-      />
-
-    </ProductPageSection>
-
-    <ProductPageSection
-      title="Design Process"
-      description="Each update addresses specific usability challenges such as compressed meal lists, and unclear sleep data presentation by refining interface elements, optimizing visual hierarchy, and adding intuitive cues. The following sections describe the reasoning and impact behind each redesign, highlighting improvements that make health tracking more accessible and actionable."
-    >
-      <TypographyH3>Redesign Individual Markers</TypographyH3>
-      <TypographyP>
-        <strong>Problem:</strong> On the individual markers screen of the Ultrahuman
-        app, users faced a cluttered layout, confusing terminology, and a lack of
-        clear explanations for key metrics. This led to difficulty interpreting data
-        and reduced confidence in the insights provided..
-      </TypographyP>
-      <TypographyP>
-        <strong>Solution:</strong> I added concise explanations for each metric, reorganized
-        the layout to improve spacing, and refined how certain metrics were displayed.
-        These changes made the screen cleaner, easier to understand, and more supportive
-        of user trust in the data.
-      </TypographyP>
-    </ProductPageSection>
-    <ImageSection
-      src={individualMarkers.src}
-      alt="Redesign Individual Markers"
-    />
-
-    <ProductPageSection>
-      <TypographyH3
-        >Streamlining Meal Tracking for Better Readability and Smarter Recall</TypographyH3
-      >
-      <TypographyP>
-        <strong>Problem:</strong> The list of past meals appears overly compressed,
-        with too much information packed into a limited space, making it hard to read
-        and match quantities to the correct items. Additionally, the tracked items
-        seem to be displayed in no particular order, leaving users unsure whether
-        they are seeing the most frequent or most recent entries first
-      </TypographyP>
-      <TypographyP>
-        <strong>Solution:</strong> In the updated design, meal items are now displayed
-        individually, with calories and quantities presented in a clearer, more readable
-        format. A new section for saving custom meals has been added at the top for
-        quicker access. These saved meals appear first, followed by the most frequently
-        tracked items. Each saved meal also shows the total calorie count for every
-        food item it includes.
-      </TypographyP>
-    </ProductPageSection>
-    <ImageSection src={mealtracker.src} alt="Meal tracking image" />
-
-    <ProductPageSection>
-      <TypographyH3
-        >Visualizing Macronutrients for Instant Nutritional Understanding</TypographyH3
-      >
-      <TypographyP>
-        <strong>Problem:</strong> The macronutrient doughnut graph is difficult to
-        interpret.
-      </TypographyP>
-      <TypographyP>
-        <strong>Solution:</strong> The macronutrients are displayed in a separate
-        doughnut graph, which makes it clear to understand how the total number of
-        calories in the item is split between each macronutrient.
-      </TypographyP>
-    </ProductPageSection>
-    <ImageSection src={macronutrients.src} alt="Macronutrients image" />
-
-    <ProductPageSection>
-      <TypographyH3
-        >Making Sleep Data Intuitive Through Smarter Charts and Visual Hierarchy
-      </TypographyH3>
-      <TypographyP>
-        <strong>Problem:</strong> The sleep stages section lacks visual clarity, making
-        it difficult for users to interpret their sleep patterns. Both the hypnogram
-        and sleep score charts have room for improvement in terms of readability and
-        data storytelling.
-      </TypographyP>
-      <TypographyP>
-        <strong>Solution:</strong> Enhanced the visual hierarchy and labeling within
-        the sleep stages section, redesign the hypnogram to better differentiate bed
-        time and wake up time, and refine the sleep score chart with clearer indicators
-        and contextual cues to help users quickly grasp their sleep quality.
-      </TypographyP>
-    </ProductPageSection>
-
-    <ImageSection src={sleepdata.src} alt="Sleep data image" />
-
-    <ProductPageSection title="Trade-offs">
-      <TypographyList
-        list={[
-          "Clarity vs. depth: simplifying dense health data without losing scientific accuracy or meaningful context.",
-          "Mobile constraints vs. data density: deciding what information to surface first on small screens without overwhelming users.",
-          "Education vs. cognitive load: adding explanations that build user confidence without cluttering the interface.",
-        ]}
-      />
-    </ProductPageSection>
-
-    <ImpactSection
-      title="Impact"
-      impacts={[
-        {
-          icon: "trending",
-          title: "User Retention",
+          title:
+            "Issue 1: Users skipped or ignored secondary option on the meal list",
           description:
-            "Personalized insights foster a deeper connection with users and encourage them to engage with the app regularly, leading to increased retention rates.",
+            "Description: During the usability test, participants frequently overlooked secondary options in the meal list, focusing only on the primary choice.",
         },
         {
-          icon: "chart",
-          title: "Increased User Engagement",
+          title:
+            "Issue 2: Difficulty interpreting the term temp. deviation and its graphic.",
           description:
-            "By simplifying the meal tracking interface and organizing past entries by relevance, we anticipate a significant increase in user engagement and tracking consistency.",
+            "Description: When encountering the “temp. deviation” metric, 2 participants hesitated, expressed confusion about its meaning, and struggled to interpret the associated chart.",
         },
         {
-          icon: "flame",
-          title: "Enhanced Understanding of Health Metrics",
+          title: "Issue 3: Sleep data visualization challenges",
           description:
-            "Implementing a layered dashboard that presents information from simple to detailed will help users better understand their health metrics without feeling overwhelmed.",
-        },
-        {
-          icon: "trophy",
-          title: "Improved User Confidence",
-          description:
-            "By providing clear and actionable insights, we aim to improve user confidence in the presented metrics, leading to increased trust and continued use of the app.",
+            "During the usability test, 3 participants hesitated when reading the sleep stages section, pausing to understand what each color or segment represented and struggling to identify the most important information at a glance.",
         },
       ]}
-      nextSteps={[
-        "Conduct A/B testing to validate the effectiveness of the new meal tracking interface.",
-        "Gather user feedback on the layered dashboard to refine the presentation of health metrics.",
-        "Monitor user engagement metrics to assess the impact of the redesign on overall app usage.",
+    />
+  </ProductPageSection>
+
+  <ProductPageSection
+    title="Design Process"
+    description="Each update addresses specific usability challenges such as compressed meal lists, and unclear sleep data presentation by refining interface elements, optimizing visual hierarchy, and adding intuitive cues. The following sections describe the reasoning and impact behind each redesign, highlighting improvements that make health tracking more accessible and actionable."
+  >
+    <TypographyH3>Redesign Individual Markers</TypographyH3>
+    <TypographyP>
+      <strong>Problem:</strong> On the individual markers screen of the Ultrahuman
+      app, users faced a cluttered layout, confusing terminology, and a lack of clear
+      explanations for key metrics. This led to difficulty interpreting data and reduced
+      confidence in the insights provided..
+    </TypographyP>
+    <TypographyP>
+      <strong>Solution:</strong> I added concise explanations for each metric, reorganized
+      the layout to improve spacing, and refined how certain metrics were displayed.
+      These changes made the screen cleaner, easier to understand, and more supportive
+      of user trust in the data.
+    </TypographyP>
+  </ProductPageSection>
+  <ImageSection src={individualMarkers.src} alt="Redesign Individual Markers" />
+
+  <ProductPageSection>
+    <TypographyH3
+      >Streamlining Meal Tracking for Better Readability and Smarter Recall</TypographyH3
+    >
+    <TypographyP>
+      <strong>Problem:</strong> The list of past meals appears overly compressed,
+      with too much information packed into a limited space, making it hard to read
+      and match quantities to the correct items. Additionally, the tracked items seem
+      to be displayed in no particular order, leaving users unsure whether they are
+      seeing the most frequent or most recent entries first
+    </TypographyP>
+    <TypographyP>
+      <strong>Solution:</strong> In the updated design, meal items are now displayed
+      individually, with calories and quantities presented in a clearer, more readable
+      format. A new section for saving custom meals has been added at the top for
+      quicker access. These saved meals appear first, followed by the most frequently
+      tracked items. Each saved meal also shows the total calorie count for every
+      food item it includes.
+    </TypographyP>
+  </ProductPageSection>
+  <ImageSection src={mealtracker.src} alt="Meal tracking image" />
+
+  <ProductPageSection>
+    <TypographyH3
+      >Visualizing Macronutrients for Instant Nutritional Understanding</TypographyH3
+    >
+    <TypographyP>
+      <strong>Problem:</strong> The macronutrient doughnut graph is difficult to interpret.
+    </TypographyP>
+    <TypographyP>
+      <strong>Solution:</strong> The macronutrients are displayed in a separate doughnut
+      graph, which makes it clear to understand how the total number of calories in
+      the item is split between each macronutrient.
+    </TypographyP>
+  </ProductPageSection>
+  <ImageSection src={macronutrients.src} alt="Macronutrients image" />
+
+  <ProductPageSection>
+    <TypographyH3
+      >Making Sleep Data Intuitive Through Smarter Charts and Visual Hierarchy
+    </TypographyH3>
+    <TypographyP>
+      <strong>Problem:</strong> The sleep stages section lacks visual clarity, making
+      it difficult for users to interpret their sleep patterns. Both the hypnogram
+      and sleep score charts have room for improvement in terms of readability and
+      data storytelling.
+    </TypographyP>
+    <TypographyP>
+      <strong>Solution:</strong> Enhanced the visual hierarchy and labeling within
+      the sleep stages section, redesign the hypnogram to better differentiate bed
+      time and wake up time, and refine the sleep score chart with clearer indicators
+      and contextual cues to help users quickly grasp their sleep quality.
+    </TypographyP>
+  </ProductPageSection>
+
+  <ImageSection src={sleepdata.src} alt="Sleep data image" />
+
+  <ProductPageSection title="Trade-offs">
+    <TypographyList
+      list={[
+        "Clarity vs. depth: simplifying dense health data without losing scientific accuracy or meaningful context.",
+        "Mobile constraints vs. data density: deciding what information to surface first on small screens without overwhelming users.",
+        "Education vs. cognitive load: adding explanations that build user confidence without cluttering the interface.",
       ]}
-      >
-      <TypographyList
+    />
+  </ProductPageSection>
+
+  <ImpactSection
+    title="Impact"
+    impacts={[
+      {
+        icon: "trending",
+        title: "User Retention",
+        description:
+          "Personalized insights foster a deeper connection with users and encourage them to engage with the app regularly, leading to increased retention rates.",
+      },
+      {
+        icon: "chart",
+        title: "Increased User Engagement",
+        description:
+          "By simplifying the meal tracking interface and organizing past entries by relevance, we anticipate a significant increase in user engagement and tracking consistency.",
+      },
+      {
+        icon: "flame",
+        title: "Enhanced Understanding of Health Metrics",
+        description:
+          "Implementing a layered dashboard that presents information from simple to detailed will help users better understand their health metrics without feeling overwhelmed.",
+      },
+      {
+        icon: "trophy",
+        title: "Improved User Confidence",
+        description:
+          "By providing clear and actionable insights, we aim to improve user confidence in the presented metrics, leading to increased trust and continued use of the app.",
+      },
+    ]}
+    nextSteps={[
+      "Conduct A/B testing to validate the effectiveness of the new meal tracking interface.",
+      "Gather user feedback on the layered dashboard to refine the presentation of health metrics.",
+      "Monitor user engagement metrics to assess the impact of the redesign on overall app usage.",
+    ]}
+  >
+    <TypographyList
       list={[
         "By adding color, I emphasized key data points, making it easier for users to quickly interpret the information.",
         "Take in consideration the content, intent, constrains and outcomes when designing visualizations.",
@@ -332,7 +327,6 @@ const constraintsItems = [
       ]}
     />
   </ImpactSection>
-  </main>
 
   <!-- <Matrix
   title="Cost vs Benefit Matrix"

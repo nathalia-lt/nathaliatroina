@@ -41,148 +41,152 @@ const insightsBlockItems = [
 ---
 
 <Layout title="Real Estate">
-  <main>
-    <ProjectHero
-      title="Real Estate"
-      subtitle="Reducing platform exit points by 60% by integrating micro-location data."
-      year="2025"
-      role="UX Designer and Front-end Developer in collaboration with: Full Stack Developer"
-      imageSrc={hero_img.src}
-    />
+  <ProjectHero
+    title="Real Estate"
+    subtitle="Reducing platform exit points by 60% by integrating micro-location data."
+    year="2025"
+    role="UX Designer and Front-end Developer in collaboration with: Full Stack Developer"
+    imageSrc={hero_img.src}
+  />
 
-    <ProjectOverview
-      timeline="3 months"
+  <ProjectOverview
+    timeline="3 months"
+    context="This real estate platform designed to bridge the gap between affluent clients and specialized brokers. The platform simplifies high-end property discovery, provides immersive architectural overviews."
+    problem="Current real estate platforms rely on rigid filters and lack local context, forcing users to leave the application to research neighborhood amenities, which triggers high drop-off rates. Furthermore, impersonal standard contact forms create a major barrier in the Brazilian market, where WhatsApp is the primary tool for business."
+    goals={[
+      "Replace static, generic search bars with a dynamic filtering system.",
+      "Integrate micro-location data directly into property pages to enhance user engagement and reduce exit rates.",
+      "Implement a context-aware messaging system to increase the quality of leads and streamline communication between users and brokers.",
+    ]}
+    process="Desk research, competitive analysis, heuristic analysis, HMW,prototyping, user testing."
+    tools={["Figma"]}
+  />
 
-      context="This real estate platform designed to bridge the gap between affluent clients and specialized brokers. The platform simplifies high-end property discovery, provides immersive architectural overviews."
-
-      problem="Current real estate platforms rely on rigid filters and lack local context, forcing users to leave the application to research neighborhood amenities, which triggers high drop-off rates. Furthermore, impersonal standard contact forms create a major barrier in the Brazilian market, where WhatsApp is the primary tool for business."
-      goals={["Replace static, generic search bars with a dynamic filtering system.",
-       "Integrate micro-location data directly into property pages to enhance user engagement and reduce exit rates.",
-       "Implement a context-aware messaging system to increase the quality of leads and streamline communication between users and brokers."]}
-      process="Desk research, competitive analysis, heuristic analysis, HMW,prototyping, user testing."
-      tools={["Figma"]}
-    />
-
-    <ProductPageSection
-      sectionClassName="mb-0"
-      title="Research"
-      description="To understand the current landscape of real estate platforms and identify opportunities for improvement, I conducted comprehensive research. Secondary data were collected and analyzed from sources such as: GOV, Exame, Diário do Comércio, and NMSC."
-    >
-      <TypographyH4>Key findings</TypographyH4>
-      <TypographyList
-        list={[
-          "41% of real estate agency interactions end in dropouts, survey indicates.",
-          "Real estate agencies in Brazil take over six hours to respond to clients interested in renting properties.",
-          "Post-contact, Plaza's research revealed that only 40.74% of contacts received a follow-up after initial disengagement.",
-          "The real estate market was valued at US$ 9.8 trillion in 2023, with projected growth to US$ 13.9 trillion by 2030, at a CAGR of 5.8% from 2024 to 2030.",
-        ]}
-      />
-      <TypographyH3>Competitive Analysis</TypographyH3>
-      <TypographyP
-        >To understand the current competitors for real estate-focused
-        applications and identify theirs strengths and uncover areas for
-        improvement, I conducted a competitor analysis covering three direct and
-        two indirect competitors.</TypographyP
-      >
-      <TypographyList
-        list={[
-          "Large platforms like QuintoAndar and ZAP prioritize volume over curation. There is a clear opportunity to serve high-end users who feel overwhelmed by generic filters and unverified listings.",
-          "Information noise (Loft and OLX): High-drop-off due to unverified listing or lack of deep neiborhood context",
-          "Features highly limited and generic filters that fail to accommodate the specific attributes.",
-        ]}
-      />
-    </ProductPageSection>
-    <ImageSection
-      src={competitive_analysis.src}
-      alt="Real Estate"
-      className="mt-0"
-    />
-
-    <ProductPageSection
-      title="Problem Statement"
-      variant="large"
-      description="How might we transform the fragmented property search into a seamless, data-rich discovery journey <mark>that reduces platform exit rates</mark> and leverages a context-aware message bridge to <mark>increase qualified lead generation</mark>?"
-    />
-
-    <ProductPageSection
-      title="Jobs to be done"
-      description="Understanding users tasks or “jobs” with a product reveals drivers of behaviors, aiding in effective product design for enhanced satisfaction and successes."
-    >
-      <!-- essa div é o container dos cards, aqui vai decidir os gaps -->
-      <div class="flex flex-col gap-md">
-        {
-          insightsBlockItems.map((item) => (
-            <InsightsBlock description={item.description} icon={item.icon} />
-          ))
-        }
-      </div>
-    </ProductPageSection>
-
-    <ProductPageSection title="Design Solutions">
-      <TypographyH3>Integrating micro-location data</TypographyH3>
-      <TypographyP>
-        We believe that integrating micro-location data and neighborhood
-        insights directly into the property page will eliminate the need for
-        external searches, thereby <strong
-          >increasing on-page retention and user trust</strong
-        >.
-      </TypographyP>
-      <TypographyH3 className="mt-lg">Context-aware messaging system</TypographyH3>
-      <TypographyP
-        >We believe that replacing generic contact forms with a context-aware
-        messaging system will significantly <strong
-          >increase the quality of leads</strong
-        > by providing brokers with immediate property-specific data.</TypographyP
-      >
-    </ProductPageSection>
-    <ImageSection src={aptpage.src} alt="onboarding image" />
-
-    <ProductPageSection>
-      <TypographyH3>Filtering System</TypographyH3>
-      <TypographyP>We believe that engineering a specialized dynamic filtering system tailored to real estate platfornm will allow users to refine searches based on high-end criteria, thereby <strong>reducing time-to-discovery and increasing the search success rate</strong>.
-      </TypographyP>
-    </ProductPageSection>
-    <ImageSection src={filterpage.src} alt="filtering system image" />
-
-
-    <ImpactSection
-      title="Impact"
-      impacts={[
-        {
-          icon: "map",
-          title: "User Retention",
-          description:
-            "Optimized engagement by integrating micro-location data directly into property pages. This led to a 45% increase in average session duration and a 60% reduction in platform exit points.",
-        },
-        {
-          icon: "message",
-          title: "Lead Optimization",
-          description:
-            "Redesigned the conversion funnel with a context-aware message bridge. 60% of incoming leads are now pre-qualified with specific property details, accelerating broker response times.",
-        },
-        {
-          icon: "chart",
-          title: "Search Efficiency",
-          description:
-            "Engineered a specialized dynamic filtering system tailored to real estate platforms. The system achieved a 90% search success rate, reducing time-to-discovery by 30% compared to generic competitors.",
-        },
-        {
-          icon: "tags",
-          title: "Visual Scanning",
-          description: "Introduced contextual property amenity tags (e.g., gym, pool, play area) directly into overview cards. This enhanced immediate scannability and drove a 25% increase in click-through rates on high-end listings.",
-        },
+  <ProductPageSection
+    sectionClassName="mb-0"
+    title="Research"
+    description="To understand the current landscape of real estate platforms and identify opportunities for improvement, I conducted comprehensive research. Secondary data were collected and analyzed from sources such as: GOV, Exame, Diário do Comércio, and NMSC."
+  >
+    <TypographyH4>Key findings</TypographyH4>
+    <TypographyList
+      list={[
+        "41% of real estate agency interactions end in dropouts, survey indicates.",
+        "Real estate agencies in Brazil take over six hours to respond to clients interested in renting properties.",
+        "Post-contact, Plaza's research revealed that only 40.74% of contacts received a follow-up after initial disengagement.",
+        "The real estate market was valued at US$ 9.8 trillion in 2023, with projected growth to US$ 13.9 trillion by 2030, at a CAGR of 5.8% from 2024 to 2030.",
       ]}
-      nextSteps={[
-        "Implement a recommendation engine that suggests properties based on the user's browsing history and saved favorites.",
-        "Sun Path Visualization: Developing a custom interactive tool to visualize natural lighting.",
-      ]}
+    />
+    <TypographyH3 className="mt-4xl">Competitive Analysis</TypographyH3>
+    <TypographyP
+      >To understand the current competitors for real estate-focused
+      applications and identify theirs strengths and uncover areas for
+      improvement, I conducted a competitor analysis covering three direct and
+      two indirect competitors.</TypographyP
     >
-      <TypographyList
-        list={[
-          "User experience principles can be universal, they are often still filtered by cultural context. While a standard email form might work for international markets, the Brazilian real estate market demands a WhatsApp approach.",
-          "Unfortunately, many constraints do not emerge until well into the design process. Working through the design of user experience and assessing feasibility of design concepts reveals constraints.",
-        ]}
-      />
-    </ImpactSection>
-  </main>
+    <TypographyList
+      list={[
+        "Large platforms like QuintoAndar and ZAP prioritize volume over curation. There is a clear opportunity to serve high-end users who feel overwhelmed by generic filters and unverified listings.",
+        "Information noise (Loft and OLX): High-drop-off due to unverified listing or lack of deep neiborhood context",
+        "Features highly limited and generic filters that fail to accommodate the specific attributes.",
+      ]}
+    />
+  </ProductPageSection>
+  <ImageSection
+    src={competitive_analysis.src}
+    alt="Real Estate"
+    className="mt-0"
+  />
+
+  <ProductPageSection
+    title="Problem Statement"
+    variant="large"
+    description="How might we transform the fragmented property search into a seamless, data-rich discovery journey <mark>that reduces platform exit rates</mark> and leverages a context-aware message bridge to <mark>increase qualified lead generation</mark>?"
+  />
+
+  <ProductPageSection
+    title="Jobs to be done"
+    description="Understanding users tasks or “jobs” with a product reveals drivers of behaviors, aiding in effective product design for enhanced satisfaction and successes."
+  >
+    <!-- essa div é o container dos cards, aqui vai decidir os gaps -->
+    <div class="flex flex-col gap-md">
+      {
+        insightsBlockItems.map((item) => (
+          <InsightsBlock description={item.description} icon={item.icon} />
+        ))
+      }
+    </div>
+  </ProductPageSection>
+
+  <ProductPageSection title="Design Solutions">
+    <TypographyH3>Integrating micro-location data</TypographyH3>
+    <TypographyP>
+      We believe that integrating micro-location data and neighborhood insights
+      directly into the property page will eliminate the need for external
+      searches, thereby <strong
+        >increasing on-page retention and user trust</strong
+      >.
+    </TypographyP>
+    <TypographyH3 className="mt-lg">Context-aware messaging system</TypographyH3
+    >
+    <TypographyP
+      >We believe that replacing generic contact forms with a context-aware
+      messaging system will significantly <strong
+        >increase the quality of leads</strong
+      > by providing brokers with immediate property-specific data.</TypographyP
+    >
+  </ProductPageSection>
+  <ImageSection src={aptpage.src} alt="onboarding image" />
+
+  <ProductPageSection>
+    <TypographyH3>Filtering System</TypographyH3>
+    <TypographyP
+      >We believe that engineering a specialized dynamic filtering system
+      tailored to real estate platfornm will allow users to refine searches
+      based on high-end criteria, thereby <strong
+        >reducing time-to-discovery and increasing the search success rate</strong
+      >.
+    </TypographyP>
+  </ProductPageSection>
+  <ImageSection src={filterpage.src} alt="filtering system image" />
+
+  <ImpactSection
+    title="Impact"
+    impacts={[
+      {
+        icon: "map",
+        title: "User Retention",
+        description:
+          "Optimized engagement by integrating micro-location data directly into property pages. This led to a 45% increase in average session duration and a 60% reduction in platform exit points.",
+      },
+      {
+        icon: "message",
+        title: "Lead Optimization",
+        description:
+          "Redesigned the conversion funnel with a context-aware message bridge. 60% of incoming leads are now pre-qualified with specific property details, accelerating broker response times.",
+      },
+      {
+        icon: "chart",
+        title: "Search Efficiency",
+        description:
+          "Engineered a specialized dynamic filtering system tailored to real estate platforms. The system achieved a 90% search success rate, reducing time-to-discovery by 30% compared to generic competitors.",
+      },
+      {
+        icon: "tags",
+        title: "Visual Scanning",
+        description:
+          "Introduced contextual property amenity tags (e.g., gym, pool, play area) directly into overview cards. This enhanced immediate scannability and drove a 25% increase in click-through rates on high-end listings.",
+      },
+    ]}
+    nextSteps={[
+      "Implement a recommendation engine that suggests properties based on the user's browsing history and saved favorites.",
+      "Sun Path Visualization: Developing a custom interactive tool to visualize natural lighting.",
+    ]}
+  >
+    <TypographyList
+      list={[
+        "User experience principles can be universal, they are often still filtered by cultural context. While a standard email form might work for international markets, the Brazilian real estate market demands a WhatsApp approach.",
+        "Unfortunately, many constraints do not emerge until well into the design process. Working through the design of user experience and assessing feasibility of design concepts reveals constraints.",
+      ]}
+    />
+  </ImpactSection>
 </Layout>

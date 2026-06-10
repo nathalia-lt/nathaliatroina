@@ -4,12 +4,12 @@ import { cn } from '@/lib/utils';
 
 
 function Section({ title = "", children, className="" }) {
-  const baseClasses = "my-5xl max-w-7xl mx-auto";
+  const baseClasses = "mt-4xl md:my-5xl max-w-7xl mx-auto";
 
   return (
     <section className={cn(baseClasses, className)} >
       <div className="grid grid grid-cols-12 gap-md">
-        {title && <TypographyH2 className="mb-2xl col-span-5">{title}</TypographyH2>}
+        {title && <TypographyH2 className="mb-xm md:mb-2xl col-span-12 md:col-span-5">{title}</TypographyH2>}
       </div>
       {children}
     </section>

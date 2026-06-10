@@ -14,12 +14,12 @@ export default function InsightsBlock({ description, icon}) {
     }
     return (
 
-        <div className="flex items-center gap-md border rounded-md p-sm bg-card">
+        <div className="flex flex-col md:flex-row items-center gap-md border rounded-md p-sm bg-card">
             <div className="flex items-center justify-center rounded-xs bg-secondary-100 px-xs py-2xs">
                 {icons[icon]}
             </div>
             <div>
-                <TypographyP className="">{description}</TypographyP>
+                <TypographyP className="text-center md:text-left"><span dangerouslySetInnerHTML={{ __html: description }}></span></TypographyP>
             </div>    
         </div>
   

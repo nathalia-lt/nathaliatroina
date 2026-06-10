@@ -21,10 +21,12 @@ const { title = "Astro Basics", scrollTopButton = true } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="">
     <!-- tudo que exige um JS no astro, tem que colocar o client:load -->
     <Header client:load />
-    <slot />
+    <main class="max-w-7xl mx-auto px-xl">
+      <slot />
+    </main>
     {scrollTopButton && <ScrollTopButton client:load />}
     <Footer />
   </body>

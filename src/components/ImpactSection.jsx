@@ -10,7 +10,7 @@ export default function ImpactSection({ title, impacts, nextSteps, className = "
         <Section title={title}>
 
             <LayoutGrid>
-                <div className="grid grid-cols-2 gap-xl mb-3xl pb-3xl">
+                <div className="grid gri-cols-1 md:grid-cols-2 gap-xl mb-3xl pb-3xl">
                     {impacts.map((item, index) => (
                         <ImpactCard
                             key={index} 

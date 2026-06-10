@@ -6,9 +6,9 @@ export default function ProjectOverview({timeline, context, problem, problems={}
   
   return (
     <Section>
-      <div className="flex gap-3xl">
+      <div className="flex flex-col md:flex-row gap-2xs md:gap-5xl">
         {/* coluna 1 */}
-        <div className="flex-1 pl-2xl">
+        <div className="flex-1 ">
           <TypographyH4>Timeline</TypographyH4>
           <RenderText text={timeline} />
 
@@ -25,7 +25,7 @@ export default function ProjectOverview({timeline, context, problem, problems={}
           
         </div>
         {/* coluna 2 */}
-        <div  className="flex-1 pr-2xl">
+        <div  className="flex-1 ">
           <TypographyH4>Goals</TypographyH4>
           <div>
             <TypographyList className="mt-xs mb-xl" list={goals} />

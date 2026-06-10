@@ -5,7 +5,7 @@ import LayoutGrid from "./LayoutGrid";
 // sempre que faz um map colocar uma key unica
 export default function SurveyCardsContainer({ cards=[], className = "" }) {
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-3 mt-sm ${className}`}>
+    <div className={`grid grid-cols-1 md:grid-cols-3 gap-2xl mt-md ${className}`}>
       {cards.map((card, index) => (
         <div key={index}>
           <TypographyP variant="large" className="text-neutral-600 font-medium">{card.title}</TypographyP>
