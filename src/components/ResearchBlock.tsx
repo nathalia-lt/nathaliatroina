@@ -1,5 +1,5 @@
 import Section from "./Section";
-import { TypographyH2, TypographyH3, TypographyP } from "./ui/Typography";
+import { TypographyH2, TypographyH3, TypographyH4, TypographyP } from "./ui/Typography";
 import LayoutGrid from "./LayoutGrid";
 
 export default function ResearchBlock({title, items, children}: {title: string, items: {title: string, description: string}[], children?: React.ReactNode}) {
