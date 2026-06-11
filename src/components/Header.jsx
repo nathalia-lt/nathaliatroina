@@ -24,7 +24,7 @@ function Header() {
               <NavigationMenuLink className="w-5xl h-4xl justify-center" href="/nathaliatroina/about">About</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="w-5xl h-4xl justify-center">Work</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="w-5xl h-3xl justify-center">Work</NavigationMenuTrigger>
               <NavigationMenuContent data-test="EU">
                   <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/nathaliatroina/projects/ultrahuman'>Ultrahuman</NavigationMenuLink>
                   <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/nathaliatroina/projects/design-system'>Design System</NavigationMenuLink>
