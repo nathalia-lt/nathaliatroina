@@ -4,240 +4,52 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Tailwind V4*/
-
-/*  Registra as variáveis que vamos usar no nosso design system */
-@theme inline {
-  --font-title: "Playfair Display", serif;
-  --font-sans: "Open Sans", sans-serif;
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  /* bg-{valor da cor}: bg-primary, text-{valor da cor}: text-primary border-{valor da cor}: border-primary*/
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary-hover: var(--primary-hover);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-
-
-  --color-border: var(--border);
-
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-
-  /* --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6); */
-
-  /* valor base: 0.500rem = 8px */
-  /* valor base X 1.4: 0.500 * 1.4 = 8px * 1.4 = 11.2px  */
-
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
-
-
-  --color-X: var(--X);
-
-  /* registro no tailwind */
-  --color-secondary: var(--secondary-500);
-
-  --color-secondary-50: var(--secondary-50);
-  --color-secondary-100: var(--secondary-100);
-  --color-secondary-200: var(--secondary-200);
-  --color-secondary-500: var(--secondary-500);
-}
-
-/* Valores tema claro */
-:root {
-  --X: #fa3460;
-
-  /* radius: 8px */
-  /* --radius: 0.500rem; */
-
-  --background: #f3f5f8;
-  /* foregroung: cor base do texto */
-  --foreground: #373e55;
-  /* oklch(0.145 0 0); */
-
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --project-card-1: red;
-  --project-card-2: yellow;
-
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-
-  --primary: #7242f0;
-
-  --primary-foreground: #f5f0ff;
-  --primary-hover: green;
-
-  /* valores */
-  --secondary-50: #fefcec;
-  --secondary-100: #fbf5ca;
-  --secondary-200: #f6ea91;
-  --secondary-500: #F0cd41;
-
-  --secondary-foreground: oklch(0.205 0 0);
-
-  --terciary: #D5F041;
-  --terciary-foreground: oklch(0.205 0 0);
-
-
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-
-
-  --destructive: oklch(0.577 0.245 27.325);
-
-  --border: #d8dae2;
-
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-  /* Typography */
-  --font-title: 'playfair display', serif;
-  --font-body: 'open sans', sans-serif;
-}
-
-/* abaixo o que eu fiz */
-
 /* ============================================================
-   TAILWIND v4 — DESIGN TOKENS SEMÂNTICOS
+   @theme inline
+   Paleta: hex estático. Semânticos: apontam para :root.
+   dark: variant funciona automaticamente em qualquer utility.
    ============================================================ */
-
 @theme inline {
 
-  /* ---------------------------------------
-     TYPOGRAPHY TOKENS
-     --------------------------------------- */
+  /* FONTS */
   --font-title: "Playfair Display", serif;
-  --font-body: "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
 
+  /* TYPOGRAPHY */
   --text-heading-2xl: 4.5rem;
-  --text-heading-2xl-mobile: 4.0rem;
-  /* 72px */
   --text-heading-xl: 2.25rem;
-  /* 36px */
   --text-heading-lg: 1.875rem;
-  /* 30px */
   --text-heading-md: 1.5rem;
-  /* 24px */
   --text-body-lg: 1.5rem;
-  /* 24px */
   --text-body-md: 1.25rem;
-  /* 20px */
   --text-body-sm: 1rem;
-  /* 16px */
 
-  /* Line Height (Interlinagem) */
-  --spacing-tight: 1.1;
-  --spacing-relaxed: 1.6;
-  --spacing-portfolio: 1.4;
-  /* Valor personalizado para seu corpo de texto */
-
-  /* Letter Spacing (Espaçamento entre letras) */
-  --letter-spacing-tighter: -0.05em;
-  --letter-spacing-widest: 0.1em;
-  --letter-spacing-title: 0.02em;
-  /* Ideal para títulos em Playfair */
-
-
-  /* ---------------------------------------
-   SPACING TOKENS — Semantic (4px scale)
-   --------------------------------------- */
-
-  /* Micro spacing */
+  /* SPACING */
   --spacing-2xs: 0.25rem;
-  /* 4px  */
   --spacing-xs: 0.5rem;
-  /* 8px  */
-
-  /* Small spacing */
   --spacing-sm: 0.75rem;
-  /* 12px */
   --spacing-md: 1rem;
-  /* 16px */
-
-  /* Medium spacing */
   --spacing-lg: 1.25rem;
-  /* 20px */
   --spacing-xl: 1.5rem;
-  /* 24px */
-
-  /* Large spacing */
   --spacing-2xl: 1.75rem;
-  /* 28px */
   --spacing-3xl: 2rem;
-  /* 32px */
-
-  /* Extra large spacing */
   --spacing-4xl: 3rem;
-  /* 48px */
   --spacing-5xl: 5rem;
-  /* 80px */
 
-  /* ---------------------------------------
-     BREAKPOINT TOKENS
-     --------------------------------------- */
+  /* BREAKPOINTS */
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
 
-  /* ---------------------------------------
-     GRID TOKENS
-     --------------------------------------- */
-  --grid-columns: 12;
-  --grid-gutter: var(--spacing-lg);
-  --grid-max-width: 1280px;
+  /* RADIUS */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
 
-  /* ---------------------------------------
-     COLOR TOKENS — SEMÂNTICOS
-     --------------------------------------- */
-
-  /* PRIMARY (Blue) */
+  /* PALETTE — Primary / Purple */
   --color-primary-100: #f1ecfe;
   --color-primary-200: #d3c4fa;
   --color-primary-300: #a180f5;
@@ -246,7 +58,8 @@
   --color-primary-700: #512faa;
   --color-primary-800: #3f2484;
 
-  /* SECONDARY (Yellow) */
+  /* PALETTE — Secondary / Yellow */
+  --color-secondary-50: #fefcec;
   --color-secondary-100: #fefaec;
   --color-secondary-200: #faf0c4;
   --color-secondary-300: #f5de80;
@@ -255,7 +68,7 @@
   --color-secondary-700: #aa922e;
   --color-secondary-800: #847124;
 
-  /* TERTIARY (Green) */
+  /* PALETTE — Tertiary / Green */
   --color-tertiary-100: #fbfeec;
   --color-tertiary-200: #f2fac4;
   --color-tertiary-300: #e3f580;
@@ -264,94 +77,103 @@
   --color-tertiary-700: #97aa2e;
   --color-tertiary-800: #758424;
 
-  /* NEUTRAL (Gray/Violet) */
-  --color-neutral-100: #f7f8fa;
-  /* background card*/
-  --color-neutral-200: #f6f7f9;
-  --color-neutral-300: #f3f5f8;
-  /* background */
-  --color-neutral-400: #d8dae2;
-  /*  stroke border */
-  --color-neutral-500: #677694;
-  --color-neutral-600: #373e55;
-  /* foreground body*/
-  --color-neutral-700: #212430;
-  /* foreground Heading */
+  /* PALETTE — Neutral */
+  --color-neutral-100: var(--color-neutral-100);
+  --color-neutral-200: var(--color-neutral-200);
+  --color-neutral-300: var(--color-neutral-300);
+  --color-neutral-400: var(--color-neutral-400);
+  --color-neutral-500: var(--color-neutral-500);
+  --color-neutral-600: var(--color-neutral-600);
+  --color-neutral-700: var(--color-neutral-700);
 
-  /* ROLES (semantic mapping) */
-  --color-background: var(--color-neutral-200);
-  --color-foreground: var(--color-neutral-700);
-  --color-border: var(--color-neutral-400);
 
-  --color-primary: var(--color-primary-500);
-  --color-primary-hover: var(--color-primary-700);
-  --color-primary-foreground: var(--color-neutral-100);
-
-  --color-secondary: var(--color-secondary-500);
-  --color-secondary-hover: var(--color-secondary-700);
-
-  --color-tertiary: var(--color-tertiary-500);
-
-  --color-muted: var(--color-neutral-300);
-  --color-muted-foreground: var(--color-neutral-600);
-
-  --color-input: var(--color-neutral-200);
-  --color-ring: var(--color-primary-300);
-
-  /* Radius Tokens */
-
-  --radius-xs: 4px;
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
+  /* SEMANTIC — apontam para :root (override em .dark) */
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
 
 }
 
 /* ============================================================
-   LIGHT THEME VALUES
+   LIGHT THEME
    ============================================================ */
-
 :root {
-  --font-title: "Playfair Display", serif;
-  --font-body: "Open Sans", sans-serif;
+
+  --color-neutral-100: #f7f8fa;
+  --color-neutral-200: #f6f7f9;
+  --color-neutral-300: #f3f5f8;
+  --color-neutral-400: #d8dae2;
+  --color-neutral-500: #677694;
+  --color-neutral-600: #373e55;
+  --color-neutral-700: #212430;
+
+  --background: #f7f8fa;
+  --foreground: #212430;
+
+  --primary: #7242f0;
+  --primary-foreground: #f1ecfe;
+  --primary-hover: #512faa;
+
+  --border: #d8dae2;
+  --input: oklch(0.922 0 0);
+  --ring: #a180f5;
 }
 
-
+/* ============================================================
+   DARK THEME
+   Dois mecanismos em paralelo:
+   1. Palette remap → bg-neutral-300, text-primary-500 etc. mudam globalmente
+   2. Semantic override → bg-background, text-foreground etc. mudam via :root vars
+   Componentes que precisam de controle fino: use dark: variant direto na classe.
+   ============================================================ */
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --primary-hover: green;
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
+
+  /* --- 1. PALETTE REMAP ------------------------------------
+     Afeta qualquer utility de escala (bg-primary-500, text-neutral-700…)
+     usada nos componentes, sem precisar tocar neles.
+     Ajuste estes valores conforme seu design final.
+  ----------------------------------------------------------- */
+
+  /* Neutral: inverte luminosidade */
+  --color-neutral-100: #1e2130;
+  --color-neutral-200: #232840;
+  --color-neutral-300: #2a3050;
+  --color-neutral-400: #3a4268;
+  --color-neutral-500: #677694;
+  --color-neutral-600: #c8cdd8;
+  --color-neutral-700: #eceef4;
+
+  /* Primary: sobe um step para manter contraste em fundo escuro */
+  --color-primary-100: #2d1f5a;
+  --color-primary-300: #7242f0;
+  --color-primary-400: #a180f5;
+  --color-primary-500: #8e68f3;
+  --color-primary-700: #d3c4fa;
+
+  /* Secondary e Tertiary: a definir conforme design */
+  /* --color-secondary-500: ...; */
+  /* --color-tertiary-500: ...; */
+
+  /* --- 2. SEMANTIC OVERRIDES ------------------------------- */
+  --background: #232323;
+  --foreground: #e0e0e0;
+
+  --primary: #8e68f3;
+  --primary-foreground: #2d1f5a;
+  --primary-hover: #d3c4fa;
+
+  --border: #444444;
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* ============================================================
+   BASE LAYER
+   ============================================================ */
 @layer base {
   * {
     @apply border-border outline-ring/50;

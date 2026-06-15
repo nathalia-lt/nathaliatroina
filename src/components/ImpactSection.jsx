@@ -4,15 +4,20 @@ import {TypographyH4, TypographyP, TypographyList} from "./ui/Typography";
 import ImpactCard from "./ImpactCard";
 
 
-export default function ImpactSection({ title, impacts, nextSteps, children }) {
+export default function ImpactSection({ title, description="default", variant="", impactsTitle="", impacts, nextSteps, children }) {
 
     return (
         <Section title={title}>
 
             <LayoutGrid>
-                {/* <div className="mb-xl">
-                    <TypographyP variant="normal"></TypographyP>
-                </div> */}
+                {description && (
+                <div className="mb-3xl">
+                    <TypographyP variant={variant}><span dangerouslySetInnerHTML={{ __html: description }}></span></TypographyP>
+                </div>
+                )}
+
+                {impactsTitle && <TypographyH4 className="mb-2xl" >{impactsTitle}</TypographyH4>}
+
                 <div className="grid gri-cols-1 md:grid-cols-2 gap-xl mb-3xl pb-3xl">
                     {impacts.map((item, index) => (
                         <ImpactCard

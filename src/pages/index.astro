@@ -83,54 +83,53 @@ let projectCardsList = [
   <!-- Hero section -->
   <!-- aqui nessa classe eu fiz o "media-query" -->
 
-    <section class="py-4xl md:py-44 relative">
-      <TypographyH1 className="mb-xl"
-        >Hi! I am Nathalia Troina <br /> Product Designer</TypographyH1
+  <section class="py-4xl md:py-44 relative">
+    <TypographyH1 className="mb-xl"
+      >Hi! I am Nathalia Troina <br /> Product Designer</TypographyH1
+    >
+    <!-- quero aumentar o tamanho do texto para 24px no subtitulo -->
+    <TypographyP variant="large" className="mb-4xl">
+      Combines user‑centered design with technical feasibility to enhance
+      company results. I balance the ideal user experience with business
+      constraints to ensure the best outcomes are achieved.
+    </TypographyP>
+    <Button asChild>
+      <a
+        class={buttonVariants({ variant: "default", size: "default" }) +
+          " w-44 h-4xl!"}
+        href="/nathaliatroina/nathaliatroinaresume.pdf"
+        target="_blank"
       >
-      <!-- quero aumentar o tamanho do texto para 24px no subtitulo -->
-      <TypographyP variant="large" className="mb-4xl">
-        Combines user‑centered design with technical feasibility to enhance
-        company results. I balance the ideal user experience with business
-        constraints to ensure the best outcomes are achieved.
-      </TypographyP>
-      <Button asChild>
-        <a
-          class={buttonVariants({ variant: "default", size: "default" }) +
-            " w-44 h-4xl!"}
-          href="/nathaliatroina/nathaliatroinaresume.pdf"
-          target="_blank"
-        >
-          Resume
-        </a></Button
-      >
-      <img
-        src={stars.src}
-        alt="start image"
-        class="absolute bottom-0 right-4 w-24 pointer-events-none"
-      />
-    </section>
+        Resume
+      </a></Button
+    >
+    <img
+      src={stars.src}
+      alt="start image"
+      class="absolute bottom-0 right-4 w-24 pointer-events-none"
+    />
+  </section>
 
-    <Section title="Recent Projects">
-      <!-- aspect-video para manter o alinhamento perfeito -->
-      <!-- Grid: 1 coluna no mobile, 2 colunas no desktop -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
-        {
-          projectCardsList.map((project) => {
-            return (
-              <ProjectCard
-                title={project.title}
-                description={project.description}
-                content={project.content}
-                badgesList={project.badgesList}
-                imageSrc={project.imageSrc}
-                imageAlt={project.imageAlt}
-                imageBgColor={project.imageBgColor}
-                projectUrl={project.projectUrl}
-              />
-            );
-          })
-        }
-      </div>
-    </Section>
-
+  <Section title="Recent Projects" className="mb-3xl">
+    <!-- aspect-video para manter o alinhamento perfeito -->
+    <!-- Grid: 1 coluna no mobile, 2 colunas no desktop -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+      {
+        projectCardsList.map((project) => {
+          return (
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              content={project.content}
+              badgesList={project.badgesList}
+              imageSrc={project.imageSrc}
+              imageAlt={project.imageAlt}
+              imageBgColor={project.imageBgColor}
+              projectUrl={project.projectUrl}
+            />
+          );
+        })
+      }
+    </div>
+  </Section>
 </Layout>

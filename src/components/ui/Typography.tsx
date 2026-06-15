@@ -51,7 +51,7 @@ export function TypographyH4({ className, children }: { children: React.ReactNod
 // tirar o tight do texto princpal e colocar um leading mais solto, tipo 1.5 ou 1.6, colocar 150% de line height (leading-relaxed)
 export function TypographyP({ children, variant, className }: { children: React.ReactNode, variant?: "default" | "large", className?: string }) {
 
-  const baseClasses = "font-body leading text-neutral-600 [&:not(:first-child)]:mt-6";
+  const baseClasses = "font-body leading text-neutral-600 [&:not(:first-child)]:mt-6" ;
 
   const variantClasses = variant === 'large' ? 'text-body-md md:text-body-lg' : 'text-body-sm';
 
