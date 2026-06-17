@@ -50,6 +50,13 @@ const { title = "Astro Basics", scrollTopButton = true } = Astro.props;
 
       gtag("config", "G-YSLTFFBX6N");
     </script>
+
+    <script is:inline>
+      const theme = localStorage.getItem('theme') 
+        ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.classList.toggle('dark', theme === 'dark');
+    </script>
+
   </head>
   <body class="">
     <!-- tudo que exige um JS no astro, tem que colocar o client:load -->

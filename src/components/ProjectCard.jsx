@@ -13,7 +13,7 @@ function ProjectCard({ title, description, content, imageSrc, imageAlt, imageBgC
     const imageBgClasses = "w-full rounded-sm aspect-[3/2] flex items-center justify-center"
 
   return (
-    <Card className="overflow-hidden border-0 p-md rounded-lg gap-md">
+    <Card className="overflow-hidden border border-0.75 p-md rounded-lg gap-md">
         <a href={projectUrl}>
         <CardHeader className="px-0" mb-0 >
             <div className= {cn(imageBgClasses, imageBgColor)}>

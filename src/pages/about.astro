@@ -12,64 +12,72 @@ import { IconMapPin } from "@tabler/icons-react";
 import ProductPageSection from "@/components/ProductPageSection";
 
 import linkedin_img from "@/assets/About/linkedin_img.png";
+
+const educationItems = [
+  {
+    title: "Design Circuit Academy",
+    year: 2024,
+    name: "Product Design Program",
+  },
+  {
+    title: "Flatiron School",
+    year: 2022,
+    name: "Full Stack Web Development Program",
+  },
+
+];
 ---
 
 <Layout title="About">
+  <Section>
+    <div class="flex gap-5xl flex-col-reverse md:flex-row">
+      <div class="flex-2">
+        <TypographyH1>About me</TypographyH1>
+        <TypographyP>
+          I am a UX/Product designer passionate about blending creativity with
+          problem‑solving to craft intuitive digital experiences. My training in
+          modern web development and user experience principles provides a
+          strong technical foundation, enabling me to design with feasibility in
+          mind and collaborate effectively with cross‑functional teams.
+        </TypographyP>
+        <TypographyP>
+          Before transitioning into design, I worked as a mental health nurse,
+          collaborating daily with psychiatrists and psychologists to analyze
+          patient behavior. This experience sharpened my ability to observe,
+          empathize, and understand human needs, skills I now apply directly to
+          creating user‑centered solutions.
+        </TypographyP>
+        <TypographyP>
+          In my free time, you’ll often find me soaking up the sun with a book
+          or exploring new food spots.
+        </TypographyP>
+        <TypographyP className="flex items-center gap-1">
+          <IconMapPin />New York City</TypographyP
+        >
+      </div>
+      <div class="flex-1">
+        <img src={linkedin_img.src} alt="linkedin image" />
+      </div>
+    </div>
+  </Section>
 
-    <Section>
-      <div class="flex gap-5xl flex-col-reverse md:flex-row">
-        <div class="flex-2">
-          <TypographyH1>About me</TypographyH1>
-          <TypographyP>
-            I am a UX/Product designer passionate about blending creativity with problem‑solving to craft intuitive digital experiences. My training in modern web development and user experience principles provides a strong technical foundation, enabling me to design with feasibility in mind and collaborate effectively with cross‑functional teams.
-          </TypographyP>
-          <TypographyP>
-            Before transitioning into design, I worked as a mental health nurse,
-            collaborating daily with psychiatrists and psychologists to analyze
-            patient behavior. This experience sharpened my ability to observe,
-            empathize, and understand human needs, skills I now apply directly
-            to creating user‑centered solutions.
-          </TypographyP>
-          <TypographyP>
-            In my free time, you’ll often find me soaking up the sun with a book
-            or exploring new food spots.
-          </TypographyP>
-          <TypographyP className="flex items-center gap-1">
-            <IconMapPin />New York City</TypographyP>
+  <ProductPageSection title="Education">
+    {
+      educationItems.map((item) => (
+        <div class="flex justify-between mb-xl">
+          <div>
+            <TypographyH4>
+              <strong>{item.title}</strong>
+            </TypographyH4>
+            <div>
+              <TypographyP variant="default" className="text-body-md ">
+              {item.name}
+              </TypographyP>
+            </div>
+          </div>
+          {item.year && <TypographyH4>{item.year}</TypographyH4>}
         </div>
-        <div class="flex-1">
-          <img src={linkedin_img.src} alt="linkedin image" />
-        </div>
-      </div>
-    </Section>
-
-    <ProductPageSection title="Education">
-      <div class="flex justify-between mb-xl">
-        <TypographyH4
-          ><strong>Design Circuit Academy</strong> | Product Design Program</TypographyH4
-        >
-        <TypographyH4>2024</TypographyH4>
-      </div>
-      <div class="flex justify-between mb-xl">
-        <TypographyH4
-          ><strong>Flatiron School</strong> | Full Stack Web Development Program</TypographyH4
-        >
-        <TypographyH4>2022</TypographyH4>
-      </div>
-      <div class="flex justify-between mb-xl">
-        <TypographyH4
-          ><strong
-            >Instituto de Administração Hospitalar e Ciências da Saúde</strong
-          > | MBA Auditing</TypographyH4
-        >
-        <TypographyH4 />
-      </div>
-      <div class="flex justify-between mb-xl">
-        <TypographyH4
-          ><strong>Centro Universitário Metodista IPA</strong> | BS Nursing</TypographyH4
-        >
-        <TypographyH4 />
-      </div>
-    </ProductPageSection>
-
+      ))
+    }
+  </ProductPageSection>
 </Layout>

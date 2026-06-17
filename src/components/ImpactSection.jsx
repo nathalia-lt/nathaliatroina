@@ -4,12 +4,13 @@ import {TypographyH4, TypographyP, TypographyList} from "./ui/Typography";
 import ImpactCard from "./ImpactCard";
 
 
-export default function ImpactSection({ title, description="default", variant="", impactsTitle="", impacts, nextSteps, children }) {
+export default function ImpactSection({ title, description="", variant="default", impactsTitle="", sucessTitle="", impacts, nextSteps, children }) {
 
     return (
         <Section title={title}>
 
             <LayoutGrid>
+                {sucessTitle && <TypographyH4 className="mb-2xl" >{sucessTitle}</TypographyH4>}
                 {description && (
                 <div className="mb-3xl">
                     <TypographyP variant={variant}><span dangerouslySetInnerHTML={{ __html: description }}></span></TypographyP>

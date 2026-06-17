@@ -22,7 +22,7 @@ export function TypographyH1({ children, className }: { children: React.ReactNod
 
 export function TypographyH2({ children, className }: { children: React.ReactNode, className?: string }) {
   return (
-    <h2 className={cn("scroll-m-20 text-heading-xl font-title font-semibold text-neutral-700 tracking-tight first:mt-0", className)}>
+    <h2 className={cn("scroll-m-20 text-heading-xl font-title font-semibold text-neutral-700 tracking-tight first:mt-0 leading-11", className)}>
       {children}
     </h2>
   )
@@ -64,7 +64,7 @@ export function TypographyP({ children, variant, className }: { children: React.
 
 export function TypographyBlockquote({ children, author }: { children: React.ReactNode, author?: string }) {
   return (
-    <blockquote className=" max-w-[60%] text-neutral-600 mx-auto mt-6  border-l-2 dark:border-l-yellow-200 py-3 px-2xs italic dark:bg-green-900">
+    <blockquote className=" max-w-[60%] text-neutral-600 mx-auto mt-6  border-l-2 py-3 px-2xs italic ">
       &quot;{children}&quot;
       {author && <div className="text-right">{author}</div>}
     </blockquote>

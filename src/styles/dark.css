@@ -1,0 +1,37 @@
+/* ============================================================
+   DARK THEME
+
+   Neutrals: you need a new neutral palette. This is normal.
+   ============================================================ */
+
+
+.dark {
+
+  --color-background: #0f0f12;
+  
+  --color-background-alt: #16161a;/* main background */
+  /* elevated surfaces */
+
+  /* Text & foreground */
+  --color-foreground: #f5f5f7;
+  /* primary text */
+  --color-foreground-muted: #c7c7d0;
+  /* secondary text */
+
+  /* Borders & dividers */
+  --color-border: #2a2a33;
+  --color-border-strong: #3a3a45;
+
+  /* Brand colors (kept consistent across themes) */
+  --color-primary: var(--color-primary-500);
+  --color-primary-hover: var(--color-primary-600);
+
+  /* Neutrals (dark mode specific) */
+  --color-neutral-100: #1a1a1f;
+  --color-neutral-200: #222228;
+  --color-neutral-300: #2e2e36;
+  --color-neutral-400: #3a3a45;
+  --color-neutral-500: #5a5a68;
+  --color-neutral-600: #7a7a88;
+  --color-neutral-700: #9a9aa8;
+}

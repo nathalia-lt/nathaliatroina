@@ -37,8 +37,8 @@ export default function ProjectOverview({timeline, context, problem, problems={}
           { prototypeUrl && (
             <div className="mb-xl">
               <TypographyH4>Prototype</TypographyH4>
-              <Button variant="link" size="lg" className="px-0 text-body-sm"  asChild>
-                <a href={prototypeUrl} target="_blank" className="">{prototypeLabel}</a>
+              <Button variant="link" size="lg" className="px-0 text-body-sm dark:text-primary-600"  asChild>
+                <a href={prototypeUrl} target="_blank" className="dark:text-primary-600">{prototypeLabel}</a>
               </Button>
             </div> 
           )}

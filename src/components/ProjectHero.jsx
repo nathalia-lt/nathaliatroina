@@ -17,7 +17,7 @@ export default function ProjectHero({title, subtitle, year, role, imageSrc, imag
                         <span className="hidden md:inline">•</span> 
                         <span><strong>My Role</strong> <span>{role}</span></span>
                 </TypographyP>
-                <img src={imageSrc} alt={title}/>
+                <img src={imageSrc} alt={title} className="p-xs bg-white rounded"/>
             </div>
         </Section>
     )

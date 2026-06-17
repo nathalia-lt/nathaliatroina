@@ -27,7 +27,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer id="contact" className="w-full border-t border-neutral-500 bg-neutral-100 ">
+    <footer id="contact" className="w-full border-t border-neutral-500  ">
       <div className=" py-4xl">
         <div className="px-xl max-w-7xl mx-auto flex flex-col items-center gap-3xl md:flex-row md:justify-between">
           
