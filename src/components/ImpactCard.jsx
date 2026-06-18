@@ -1,4 +1,4 @@
-import { IconRocket, IconUsers, IconCode, IconChartBarPopular, IconTrophy ,IconHeart, IconFlame, IconTrendingUp, IconTargetArrow, IconMapPin, IconMessageShare, IconTags, IconBolt, IconDimensions, IconHierarchy2, IconEyeCheck  } from "@tabler/icons-react";
+import { IconRocket, IconUsers, IconCode, IconChartBarPopular, IconTrophy ,IconHeart, IconFlame, IconTrendingUp, IconTargetArrow, IconMapPin, IconMessageShare, IconTags, IconBolt, IconDimensions, IconHierarchy2, IconEyeCheck, IconHealthRecognition  } from "@tabler/icons-react";
 import{ TypographyH4, TypographyP} from "./ui/Typography";
 
 export default function ImpactCard({ icon, title, description }) {
@@ -20,6 +20,7 @@ export default function ImpactCard({ icon, title, description }) {
         "dimensions": <IconDimensions {...iconsProps} />,
         "hierarchy": <IconHierarchy2 {...iconsProps} />,
         "accessibility": <IconEyeCheck {...iconsProps} />,
+        "cognitive-load": <IconHealthRecognition {...iconsProps} />,
     };
 
     return (

@@ -24,7 +24,7 @@ function Header() {
       <NavigationMenu viewport={false} >
         <NavigationMenuList className="flex items-center gap-0 md:gap-3xl">
             <NavigationMenuItem>
-              <NavigationMenuLink className="w-5xl h-4xl justify-center" href="/nathaliatroina/about">About</NavigationMenuLink>
+              <NavigationMenuLink className="w-5xl h-4xl justify-center " href="/nathaliatroina/about">About</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="w-5xl h-3xl justify-center">Work</NavigationMenuTrigger>
@@ -33,7 +33,6 @@ function Header() {
                   <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/nathaliatroina/projects/design-system'>Design System</NavigationMenuLink>
                   <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/nathaliatroina/projects/real-estate'>Real Estate</NavigationMenuLink>
                   <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/nathaliatroina/projects/period-tracker'>Period Tracker</NavigationMenuLink>
-                  <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/nathaliatroina/projects/spirit-airlines'>Spirit Airlines</NavigationMenuLink>
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>

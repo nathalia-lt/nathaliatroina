@@ -185,8 +185,14 @@
   --color-neutral-300: #334155;
   --color-neutral-400: #64748B;
   --color-neutral-500: #94A3B8;
-  --color-neutral-600: #c7c7d0;
-  --color-neutral-700: #f5f5f7;
+  --color-neutral-600: #cbd5e1; 
+  --color-neutral-700: #f1f5f9;
+  --color-neutral-800: #f8fafc;
+
+
+  /* texto secundario 600, sutitulo 700 e hs 800 */
+
+  /* neutral 600 para textos secundarios #64748B slate 500, para texto principal de leitura #94A3B8 slate400*/
 
   /* Primary: sobe um step para manter contraste em fundo escuro */
   --color-primary-100: #2d1f5a;
