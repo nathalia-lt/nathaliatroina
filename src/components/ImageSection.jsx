@@ -8,13 +8,13 @@ export default function ImageSection({ src, alt, className="", maxWidth = null }
     const imageClasses = maxWidth ?  maxWidth + " mx-auto block" : "";
     const baseImageClasses = "w-full h-auto mt-0 md:py-8";
 
-
+    
     return (
         <Section className={cn(baseClasses, className)}>
             <img
                 src={src}
                 alt={alt}
-                class={cn(baseImageClasses, imageClasses)} 
+                className={cn(baseImageClasses, imageClasses)} 
             />
         </Section>
     );

@@ -16,8 +16,13 @@ import {
 import ImpactSection from "@/components/ImpactSection";
 import InsightsBlock from "@/components/InsightsBlock";
 import ImageSection from "@/components/ImageSection";
+import BeforeAfterToggle from "@/components/BeforeAfterToggle";
 
 import aptpage from "@/assets/projects/RealEstate/real_estate_aptpage.png";
+import aptbefore from "@/assets/projects/RealEstate/apt_before.png";
+import filterbefore from "@/assets/projects/RealEstate/filter_before.png";
+import filterafter from "@/assets/projects/RealEstate/filter_after.png";
+import aptafter from "@/assets/projects/RealEstate/apt_after.png";
 import filterpage from "@/assets/projects/RealEstate/filterpage.png";
 import hero_img from "@/assets/projects/RealEstate/hero.png";
 
@@ -67,7 +72,7 @@ const insightsBlockItems = [
     title="Research"
     description="To understand the current landscape of real estate platforms and identify opportunities for improvement, I conducted comprehensive research. Secondary data were collected and analyzed from sources such as: GOV, Exame, Diário do Comércio, and NMSC."
   >
-    <TypographyH4>Key findings</TypographyH4>
+    <TypographyH4 >Key findings</TypographyH4>
     <TypographyList
       list={[
         "41% of real estate agency interactions end in dropouts, survey indicates.",
@@ -135,7 +140,14 @@ const insightsBlockItems = [
       > by providing brokers with immediate property-specific data.</TypographyP
     >
   </ProductPageSection>
-  <ImageSection src={aptpage.src} alt="onboarding image" />
+  <BeforeAfterToggle
+    beforeImage={aptbefore.src}
+    afterImage={aptafter.src}
+    beforeAlt="before image"
+    afterAlt="after image"
+    
+    client:load
+  />
 
   <ProductPageSection>
     <TypographyH3>Filtering System</TypographyH3>
@@ -147,7 +159,14 @@ const insightsBlockItems = [
       >.
     </TypographyP>
   </ProductPageSection>
-  <ImageSection src={filterpage.src} alt="filtering system image" />
+    <BeforeAfterToggle
+    beforeImage={filterbefore.src}
+    afterImage={filterafter.src}
+    beforeAlt="before image"
+    afterAlt="after image"
+    
+    client:load
+  />
 
 <!-- To measure the impact of our design changes, we established clear success metrics, including a 20% increase in user engagement and a 15% reduction in drop-off rates. We tracked these metrics using analytics tools and user feedback to ensure that our improvements were effective and aligned with our goals. -->
 

@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 // font-black (900)
 
 export function TypographyH1({ children, className }: { children: React.ReactNode, className?: string }) {
-  const baseClasses = "font-title scroll-m-20  font-bold text-neutral-700  text-heading-2xl-mobile md:text-heading-2xl tracking-tight  leading-none";
+  const baseClasses = "font-title scroll-m-20  font-bold text-neutral-800 text-heading-2xl-mobile md:text-heading-2xl tracking-tight  leading-none";
   return (
     <h1 className={cn(baseClasses, className)}>
       {children}

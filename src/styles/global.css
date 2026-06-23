@@ -58,6 +58,7 @@
   --color-neutral-500: var(--color-neutral-500);
   --color-neutral-600: var(--color-neutral-600);
   --color-neutral-700: var(--color-neutral-700);
+  --color-neutral-800: var(--color-neutral-800);
 
   /* PALETTE — Primary */
   --color-primary-100: var(--color-primary-100);
@@ -119,6 +120,7 @@
   --color-neutral-500: #677694;
   --color-neutral-600: #373e55;
   --color-neutral-700: #212430;
+  --color-neutral-800: #0f172a;
 
   --color-primary-100: #f1ecfe;
   --color-primary-200: #d3c4fa;
@@ -185,14 +187,14 @@
   --color-neutral-300: #334155;
   --color-neutral-400: #64748B;
   --color-neutral-500: #94A3B8;
-  --color-neutral-600: #cbd5e1; 
+  --color-neutral-600: #cbd5e1;
   --color-neutral-700: #f1f5f9;
-  --color-neutral-800: #f8fafc;
+  --color-neutral-800: #ffffff;
 
 
   /* texto secundario 600, sutitulo 700 e hs 800 */
 
-  /* neutral 600 para textos secundarios #64748B slate 500, para texto principal de leitura #94A3B8 slate400*/
+  /* neutral 600 para textos secundarios #64748B  estava #cbd5e1 slate 500, para texto principal de leitura #94A3B8  estava #f1f5f9 slate400*/
 
   /* Primary: sobe um step para manter contraste em fundo escuro */
   --color-primary-100: #2d1f5a;
@@ -210,7 +212,7 @@
   /* --- 2. SEMANTIC OVERRIDES ------------------------------- */
   --background: var(--color-neutral-100);
   --background-card: var(--color-neutral-200);
-  --foreground: var(--color-neutral-700);
+  --foreground: var(--color-neutral-600);
 
   --primary: var(--color-primary-500);
   --primary-foreground: var(--color-neutral-700);

@@ -22,6 +22,16 @@ const customTwMerge = extendTailwindMerge({
             "body-sm"
           ] 
         }
+      ],
+      "color": [
+        {
+          text: [
+            "neutral-800"
+
+
+
+          ]
+        }
       ]
     }
   }

@@ -14,6 +14,7 @@ import ImageSection from "@/components/ImageSection";
 import {
   TypographyH2,
   TypographyH3,
+  TypographyH4,
   TypographyP,
   TypographyList,
   TypographyListDescription,
@@ -94,9 +95,16 @@ const constraintsItems = [
     tools={["Figma", "Miro, Google Meet"]}
   />
 
-  <ResearchBlock title="Research" items={researchItems}>
-    <ImageSection src={CompetitorAnalysis.src} alt="Competitive analysis" />
-  </ResearchBlock>
+
+  <ProductPageSection title="Research">
+    <TypographyH3>Competitive Analysis</TypographyH3>
+    <TypographyP>
+      I conducted a competitive analysis of key competitors in the health and wellness app space, categorizing them into four distinct groups. This process helped identify their strengths and uncover areas for improvement. The goal was to understand what competitors excelled at and which features could be enhanced or reimagined within the Ultrahuman experience.
+    </TypographyP>
+    <TypographyH4 className="mt-xl">Key Findings</TypographyH4>
+    <TypographyP>The analysis revealed that while glucose tracking stood out as a differentiating feature, meal logging appeared to be less emphasized in terms of visibility, integration, or design priority. Additionally, the analysis revealed a strong need to improve how data is interpreted and to enhance the clarity and usability of chart layouts.</TypographyP>
+  </ProductPageSection>
+  <ImageSection src={CompetitorAnalysis.src} alt="Competitive analysis" />
 
   <UserInterviews
     description="Conducted qualitative interview with 5 individuals who wears wearble, who are health conscius professional and fitness enthusiasts, especially those aged 18-44 year old."
@@ -112,6 +120,9 @@ const constraintsItems = [
       "Cluttered interface.",
     ]}
   />
+
+
+
 
   <ProductPageSection
     title="Problem Statement"
