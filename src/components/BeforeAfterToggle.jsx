@@ -28,7 +28,7 @@ export default function BeforeAfterToggle({ beforeLabel="Before", afterLabel="Af
             </ToggleGroup>
         </div>
 
-        <ImageSection className="mt-md!" src={current=='before' ? beforeImage : afterImage} alt={current=="before" ? beforeAlt : afterAlt} />
+        <ImageSection maxWidth="max-w-[100%] md:max-w-[600px]" className="mt-md!" src={current=='before' ? beforeImage : afterImage} alt={current=="before" ? beforeAlt : afterAlt} />
     </>
   )
 }
