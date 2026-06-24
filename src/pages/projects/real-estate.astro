@@ -57,7 +57,7 @@ const insightsBlockItems = [
   <ProjectOverview
     timeline="3 months"
     context="This real estate platform designed to bridge the gap between affluent clients and specialized brokers. The platform simplifies high-end property discovery, provides immersive architectural overviews."
-    problem="Current real estate platforms rely on rigid filters and lack local context, forcing users to leave the application to research neighborhood amenities, which triggers high drop-off rates. Furthermore, impersonal standard contact forms create a major barrier in the Brazilian market, where WhatsApp is the primary tool for business."
+    problem="Built on a rigid, ready-made template, the client’s real estate platform suffered from inflexible filters and a lack of local context. Users had to leave the application to research neighborhood amenities, leading to high drop-off rates. Additionally, the pre-made software enforced impersonal contact forms that clashed with the Brazilian market, where WhatsApp is the standard for business."
     goals={[
       "Replace static, generic search bars with a dynamic filtering system.",
       "Integrate micro-location data directly into property pages to enhance user engagement and reduce exit rates.",
@@ -103,6 +103,7 @@ const insightsBlockItems = [
   />
 
   <ProductPageSection
+    client:visible
     title="Problem Statement"
     variant="large"
     description="How might we transform the fragmented property search into a seamless, data-rich discovery journey <mark>that reduces platform exit rates</mark> and leverages a context-aware message bridge to <mark>increase qualified lead generation</mark>?"
@@ -171,6 +172,7 @@ const insightsBlockItems = [
 <!-- To measure the impact of our design changes, we established clear success metrics, including a 20% increase in user engagement and a 15% reduction in drop-off rates. We tracked these metrics using analytics tools and user feedback to ensure that our improvements were effective and aligned with our goals. -->
 
   <ImpactSection
+    client:visible
     title="Measuring Impact"
     description="To evaluate the effectiveness of the redesigned experience, we defined clear success indicators aligned with engagement, search efficiency, and lead quality. These metrics were modeled using analytics benchmarks and industry patterns for real estate platforms."
     impacts={[

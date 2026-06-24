@@ -1,14 +1,36 @@
 import Section from "./Section";
 import { TypographyH4, TypographyP, TypographyList } from "./ui/Typography";
 import {Button} from "@/components/ui/Button";
+import { IconExternalLink } from '@tabler/icons-react';
 
-export default function ProjectOverview({timeline, context, problem, problems={}, goals=[], process, prototypeLabel="", prototypeUrl="", tools=[], methodology=""}) {
+export default function ProjectOverview({
+  timeline, 
+  context, 
+  problem, 
+  problems={}, 
+  goals=[], 
+  process, 
+  prototypeLabel="", 
+  prototypeUrl="", 
+  tools=[], 
+  methodology="", 
+  results=[],
+
+  col1= ['timeline', 'context', 'problem'],
+  col2= ['goals', 'process', 'prototype', 'tools', 'results']
+}) {
   
+  const data = {
+    timeline, context, problem, problems, goals, process, prototypeLabel, prototypeUrl, tools, methodology, results
+  }
+
   return (
     <Section>
       <div className="flex flex-col md:flex-row gap-2xs md:gap-5xl">
         {/* coluna 1 */}
         <div className="flex-1 ">
+            {/* <RenderCol colItems={col1}  data={data} /> */}
+
           <TypographyH4>Timeline</TypographyH4>
           <RenderText text={timeline} />
 
@@ -26,6 +48,8 @@ export default function ProjectOverview({timeline, context, problem, problems={}
         </div>
         {/* coluna 2 */}
         <div  className="flex-1 ">
+            {/* <RenderCol colItems={col2}  data={data} /> */}
+
           <TypographyH4>Goals</TypographyH4>
           <div>
             <TypographyList className="mt-xs mb-xl" list={goals} />
@@ -38,7 +62,10 @@ export default function ProjectOverview({timeline, context, problem, problems={}
             <div className="mb-xl">
               <TypographyH4>Prototype</TypographyH4>
               <Button variant="link" size="lg" className="px-0 text-body-sm dark:text-primary-600"  asChild>
-                <a href={prototypeUrl} target="_blank" className="dark:text-primary-600">{prototypeLabel}</a>
+                <a href={prototypeUrl} target="_blank" className="dark:text-primary-600">
+                  {prototypeLabel}
+                  <IconExternalLink stroke={2} />
+                </a>
               </Button>
             </div> 
           )}
@@ -56,6 +83,15 @@ export default function ProjectOverview({timeline, context, problem, problems={}
               <RenderText text={tools.join(", ")} />
             </>
           )}
+
+          {results.length > 0 && (
+            <>
+              <TypographyH4>Results</TypographyH4>
+              <div>
+                <TypographyList className="mt-xs mb-xl" list={results} />
+              </div>
+            </>
+          )}
         </div>
       </div>
     </Section>
@@ -69,6 +105,53 @@ const RenderText = ({text}) => {
       <TypographyP className="mt-xs mb-xl"><span dangerouslySetInnerHTML={{ __html: text }}></span></TypographyP>
     </div>
   )
+}
+
+const RenderCol = ({colItems, data}) => {
+  console.log('colItems', colItems)
+  return (
+  <>
+    {colItems.includes('timeline') &&  (
+      <>
+      <TypographyH4>Timeline</TypographyH4>
+      <RenderText text={data.timeline} />
+      </>
+    )}
+    
+    {colItems.includes('context') &&  (
+      <>
+      <TypographyH4>Context</TypographyH4>
+      <RenderText text={data.context} />
+      </>
+    )}
+    
+    {colItems.includes('problem') &&  (
+      <>
+      <TypographyH4>Problem</TypographyH4>
+      <RenderText text={data.problem} />
+      {data.problems.length > 0 && (
+        <div>
+          <TypographyList className="mt-xs mb-xl" list={data.problems} />
+        </div>
+      )}
+      </>
+    )}
+
+
+    {colItems.includes('goals') && (
+      <>
+        <TypographyH4>Goals</TypographyH4>
+        <div>
+          <TypographyList className="mt-xs mb-xl" list={data.goals} />
+        </div>
+      </>
+    )}
+
+
+
+  </>    
+  )
+
 }
 
 

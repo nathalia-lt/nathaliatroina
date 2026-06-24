@@ -53,7 +53,8 @@ const insightsBlockItems = [
     icon: "bulb",
   },
   {
-    description:"We believe that delivering personalized summaries and recommendations based on user patterns <strong> will increase user engagement and perceived value </strong> because users want actionable insights, not just raw numbers, to help connect data to real-life behaviors.",
+    description:
+      "We believe that delivering personalized summaries and recommendations based on user patterns <strong> will increase user engagement and perceived value </strong> because users want actionable insights, not just raw numbers, to help connect data to real-life behaviors.",
     icon: "bulb",
   },
   {
@@ -93,16 +94,32 @@ const constraintsItems = [
     prototypeUrl="https://www.figma.com/proto/CkRofEDoXGmv43ouVaAaDH/ultrahuman-case-study?page-id=0%3A1&node-id=486-10574&viewport=349%2C1678%2C0.14&t=mC8nPbK98B4ryYS3-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=486%3A10574"
     prototypeLabel="View Figma Prototype"
     tools={["Figma", "Miro, Google Meet"]}
+    results={[
+      "Screens redesigned and validated through usability testing",
+      "Proposed success metrics defined: including retention and engagement during meal logging",
+      "Target adoption metrics established:feature comprehension and adoption time",
+    ]}
+    col1={[ "timeline", "context", "problem", "goals"]}
+    col2={[ "process", "prototype", "tools", "results"]}
   />
-
 
   <ProductPageSection title="Research">
     <TypographyH3>Competitive Analysis</TypographyH3>
     <TypographyP>
-      I conducted a competitive analysis of key competitors in the health and wellness app space, categorizing them into four distinct groups. This process helped identify their strengths and uncover areas for improvement. The goal was to understand what competitors excelled at and which features could be enhanced or reimagined within the Ultrahuman experience.
+      I conducted a competitive analysis of key competitors in the health and
+      wellness app space, categorizing them into four distinct groups. This
+      process helped identify their strengths and uncover areas for improvement.
+      The goal was to understand what competitors excelled at and which features
+      could be enhanced or reimagined within the Ultrahuman experience.
     </TypographyP>
     <TypographyH4 className="mt-xl">Key Findings</TypographyH4>
-    <TypographyP>The analysis revealed that while glucose tracking stood out as a differentiating feature, meal logging appeared to be less emphasized in terms of visibility, integration, or design priority. Additionally, the analysis revealed a strong need to improve how data is interpreted and to enhance the clarity and usability of chart layouts.</TypographyP>
+    <TypographyP
+      >The analysis revealed that while glucose tracking stood out as a
+      differentiating feature, meal logging appeared to be less emphasized in
+      terms of visibility, integration, or design priority. Additionally, the
+      analysis revealed a strong need to improve how data is interpreted and to
+      enhance the clarity and usability of chart layouts.</TypographyP
+    >
   </ProductPageSection>
   <ImageSection src={CompetitorAnalysis.src} alt="Competitive analysis" />
 
@@ -121,10 +138,8 @@ const constraintsItems = [
     ]}
   />
 
-
-
-
   <ProductPageSection
+    client:visible
     title="Problem Statement"
     variant="large"
     description="How might we translate complex health metrics into meaningful insights that support <mark>user retention</mark> and position the ring as a daily wellness companion?"
@@ -225,7 +240,12 @@ const constraintsItems = [
       of user trust in the data.
     </TypographyP>
   </ProductPageSection>
-  <ImageSection src={individualMarkers.src} alt="Redesign Individual Markers" />
+  <ImageSection
+    client:visible
+    useAnimation={true}
+    src={individualMarkers.src}
+    alt="Redesign Individual Markers"
+  />
 
   <ProductPageSection>
     <TypographyH3
@@ -247,7 +267,12 @@ const constraintsItems = [
       food item it includes.
     </TypographyP>
   </ProductPageSection>
-  <ImageSection src={mealtracker.src} alt="Meal tracking image" />
+  <ImageSection
+    client:visible
+    useAnimation={true}
+    src={mealtracker.src}
+    alt="Meal tracking image"
+  />
 
   <ProductPageSection>
     <TypographyH3
@@ -262,7 +287,12 @@ const constraintsItems = [
       the item is split between each macronutrient.
     </TypographyP>
   </ProductPageSection>
-  <ImageSection src={macronutrients.src} alt="Macronutrients image" />
+  <ImageSection
+    client:visible
+    useAnimation={true}
+    src={macronutrients.src}
+    alt="Macronutrients image"
+  />
 
   <ProductPageSection>
     <TypographyH3
@@ -282,7 +312,12 @@ const constraintsItems = [
     </TypographyP>
   </ProductPageSection>
 
-  <ImageSection src={sleepdata.src} alt="Sleep data image" />
+  <ImageSection
+    client:visible
+    useAnimation={true}
+    src={sleepdata.src}
+    alt="Sleep data image"
+  />
 
   <ProductPageSection title="Trade-offs">
     <TypographyList
@@ -297,6 +332,7 @@ const constraintsItems = [
   <!-- Data Comprehension Score (Qualitative): Aiming for a score of ≥ 4.5/5 in post-onboarding user testing when asking users: "How confident are you in knowing what your metabolic score means?" -->
 
   <ImpactSection
+    client:visible
     title="Measure Success"
     description="If this were a product designed by Ultrahuman and lauched to public, I would assume that they would measure its success in the following way:"
     impacts={[
@@ -340,5 +376,4 @@ const constraintsItems = [
       ]}
     />
   </ImpactSection>
-
 </Layout>

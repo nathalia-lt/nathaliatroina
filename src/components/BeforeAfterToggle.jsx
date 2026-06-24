@@ -17,7 +17,7 @@ export default function BeforeAfterToggle({ beforeLabel="Before", afterLabel="Af
 
   return (
     <>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-4xl">
             <ToggleGroup type="single" spacing={0}  value={current} aria-label="Before After Toggle" onValueChange={toggleCurrent}>
                 <ToggleGroupItem  variant="outline"  value="before" aria-label="Before" className="min-w-[80px]">
                     {beforeLabel}

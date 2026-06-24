@@ -106,6 +106,34 @@
   --color-primary-hover: var(--primary-hover);
 
   --color-card: var(--background-card);
+
+  --animate-slide-from-right: slideFromRight 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  --animate-fade-in: fadeIn 1.2s ease-out forwards;
+
+  @keyframes slideFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      /* transform: translateY(40%); */
+    }
+
+    to {
+      opacity: 1;
+      /* transform: translateY(0); */
+    }
+  }
 }
 
 /* ============================================================
