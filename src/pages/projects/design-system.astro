@@ -20,6 +20,8 @@ import spacingtokens from "@/assets/projects/DesignSystem/spacing_tokens.png";
 import layoutgrid from "@/assets/projects/DesignSystem/layout_grid.png";
 import typography from "@/assets/projects/DesignSystem/typography.png";
 import components from "@/assets/projects/DesignSystem/components.png";
+import tokens from "@/assets/projects/DesignSystem/tokens.png";
+import cardcode from "@/assets/projects/DesignSystem/card_code.png";
 import vscode from "@/assets/projects/DesignSystem/vscode.png";
 ---
 
@@ -55,8 +57,14 @@ import vscode from "@/assets/projects/DesignSystem/vscode.png";
     process="Research, Design tokens, components and tech implemetation"
     methodology="Atomic Design"
     tools={["Figma", "VS Code", "GitHub"]}
+    results={[
+      "A fully functional design system that enforces visual consistency and scalability.",
+      "Reduced development time when creating new pages and features.",
+      "Improved accessibility across all components.",
+      "A more efficient development process with less duplicate code and visual inconsistencies.",
+    ]}
   />
-  <!-- colocar a lista no problema -->
+
 
   <ResearchBlock
     title="Research"
@@ -141,6 +149,15 @@ import vscode from "@/assets/projects/DesignSystem/vscode.png";
   </ProductPageSection>
   <ImageSection src={components.src} alt="atomic design image" />
 
+  <ProductPageSection title="Token Types">
+    <TypographyP
+      >Design Tokens are used in place of hard-coded values and variables in order to ensure flexibility and unity across all product experiences and/or platforms. They are also platform-agnostic so it makes it easier to communicate with developers using these terms.</TypographyP>
+      <TypographyP>If the organization of style primitives is not prioritized, there will be a lot of friction between designer and developer as well as many stylistic inconsistencies that could be avoided by having a token architecture.</TypographyP>
+    
+  </ProductPageSection>
+  <ImageSection src={tokens.src} alt="atomic design image" />
+
+
   <ProductPageSection>
     <TypographyH3>Tech Implementation</TypographyH3>
     <TypographyP
@@ -153,14 +170,14 @@ import vscode from "@/assets/projects/DesignSystem/vscode.png";
     <TypographyH4 className="mt-lg">Key technical decisions</TypographyH4>
     <TypographyList
       list={[
-        "Composition: I nested atoms like Badge (for tech stacks) and Button (for links) within the Shadcn card structure to create a rich, informative organism.",
+        "Composition: I nested atoms like Badge (for tech stacks) within the Shadcn card structure to create a rich, informative organism.",
         "Using Tailwind CSS, I extended the base Shadcn styles to include custom hover effects and typography scales, ensuring the component matched my portfolio identity.",
         "Reusability: By defining a clear props structure for the image, title, and description, I transformed the static Shadcn template into a dynamic, reusable component that handles all project entries consistently.",
       ]}
     />
 
   </ProductPageSection>
-  <ImageSection src={vscode.src} alt=" code snippet" />
+  <ImageSection src={cardcode.src} alt=" code snippet" />
 
   <ImpactSection
     client:visible
