@@ -22,6 +22,7 @@ import typography from "@/assets/projects/DesignSystem/typography.png";
 import components from "@/assets/projects/DesignSystem/components.png";
 import tokens from "@/assets/projects/DesignSystem/tokens.png";
 import cardcode from "@/assets/projects/DesignSystem/card_code.png";
+import complextoken from "@/assets/projects/DesignSystem/complex_token.png";
 import vscode from "@/assets/projects/DesignSystem/vscode.png";
 ---
 
@@ -66,21 +67,16 @@ import vscode from "@/assets/projects/DesignSystem/vscode.png";
   />
 
 
-  <ResearchBlock
-    title="Research"
-    items={[
-      {
-        title: "Desk Research",
-        description:
-          "Before creating any components, I studied how established systems structure their foundations. I analyzed the design tokens, components, and documentation of Material Design, Ant Design, and Bootstrap to understand their approaches to scalability, consistency, and accessibility.",
-      },
-      {
-        title: "Key Findings",
-        description:
-          "I discovered that successful design systems prioritize a clear visual language, reusable components, and comprehensive documentation. They also emphasize accessibility and responsiveness, ensuring that the system can adapt to various devices and user needs.",
-      },
-    ]}
-  />
+
+  <ProductPageSection
+    title="Desk Research"
+    description="Before creating any components, I studied how established systems structure their foundations. I analyzed the design tokens, components, and documentation of Material Design, Ant Design, and Bootstrap to understand their approaches to scalability, consistency, and accessibility.">
+    <TypographyH3>Key Findings</TypographyH3>
+    <TypographyP>
+      I discovered that successful design systems prioritize a clear visual language, reusable components, and comprehensive documentation. They also emphasize accessibility and responsiveness, ensuring that the system can adapt to various devices and user needs.
+    </TypographyP>
+  </ProductPageSection>
+  
 
   <ProductPageSection
     title="Design System Foudations"
@@ -137,6 +133,30 @@ import vscode from "@/assets/projects/DesignSystem/vscode.png";
   </ProductPageSection>
   <ImageSection src={layoutgrid.src} alt="color palette image" />
 
+  <ProductPageSection title="Tokens">
+    <TypographyP
+      >Design Tokens are used in place of hard-coded values and variables in order to ensure flexibility and unity across all product experiences and/or platforms. They are also platform-agnostic so it makes it easier to communicate with developers using these terms.</TypographyP>
+      <TypographyP>If the organization of style primitives is not prioritized, there will be a lot of friction between designer and developer as well as many stylistic inconsistencies that could be avoided by having a token architecture.</TypographyP>
+    
+  </ProductPageSection>
+  <ImageSection 
+  src={tokens.src} 
+  alt="atomic design image"
+  maxWidth="max-w-[400px] md:max-w-[800px]"
+   />
+
+
+  <ProductPageSection>
+    <TypographyP
+      >Because this project is more straightforward, it didn't require tokens of this scale; however, the example below showcases how design tokens can handle higher complexity. While complex, the token tells a clear story. Without checking the documentation or value, both designers and developers can immediately recognize it as a background color token for containers like cards or sections. Furthermore, it explicitly communicates structural hierarchy through potential variants and indicates that it targets a specific surface state.</TypographyP>
+    
+  </ProductPageSection>
+  <ImageSection 
+  src={complextoken.src} 
+  alt="complex token image"
+  maxWidth="max-w-[400px] md:max-w-[600px]"
+   />
+
   <ProductPageSection>
     <TypographyH3>Component Library</TypographyH3>
     <TypographyP
@@ -149,17 +169,9 @@ import vscode from "@/assets/projects/DesignSystem/vscode.png";
   </ProductPageSection>
   <ImageSection src={components.src} alt="atomic design image" />
 
-  <ProductPageSection title="Token Types">
-    <TypographyP
-      >Design Tokens are used in place of hard-coded values and variables in order to ensure flexibility and unity across all product experiences and/or platforms. They are also platform-agnostic so it makes it easier to communicate with developers using these terms.</TypographyP>
-      <TypographyP>If the organization of style primitives is not prioritized, there will be a lot of friction between designer and developer as well as many stylistic inconsistencies that could be avoided by having a token architecture.</TypographyP>
-    
-  </ProductPageSection>
-  <ImageSection src={tokens.src} alt="atomic design image" />
 
 
-  <ProductPageSection>
-    <TypographyH3>Tech Implementation</TypographyH3>
+  <ProductPageSection title="Tech Implementation">
     <TypographyP
       >For the portfolio's project gallery, I utilized the Shadcn Card component
       as the structural foundation. Following the Atomic Design methodology, I
@@ -167,7 +179,7 @@ import vscode from "@/assets/projects/DesignSystem/vscode.png";
       CardContent as atoms that were composed into a functional molecule (the
       Project Card).</TypographyP
     >
-    <TypographyH4 className="mt-lg">Key technical decisions</TypographyH4>
+    <TypographyH3 className="mt-lg">Key technical decisions</TypographyH3>
     <TypographyList
       list={[
         "Composition: I nested atoms like Badge (for tech stacks) within the Shadcn card structure to create a rich, informative organism.",
