@@ -24,7 +24,7 @@ function Header() {
       <NavigationMenu viewport={false} >
         <NavigationMenuList className="flex items-center gap-0 md:gap-3xl">
             <NavigationMenuItem>
-              <NavigationMenuLink className="w-5xl h-4xl justify-center " href="/nathaliatroina/about">About</NavigationMenuLink>
+              <NavigationMenuLink className="w-5xl h-4xl justify-center " href="/nathaliatroina#aboutme">About</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="w-5xl h-3xl justify-center">Work</NavigationMenuTrigger>

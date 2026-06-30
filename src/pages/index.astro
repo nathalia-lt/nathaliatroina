@@ -21,6 +21,7 @@ import stars from "@/assets/stars.png";
 import design_system from "@/assets/projects/DesignSystem/design_system_test.png";
 import realestate_hero from "@/assets/projects/RealEstate/hero.png";
 import ultrahuman_mockup from "@/assets/projects/Ultrahuman/ultrahuman_mockup.png";
+import linkedin_img from "@/assets/About/linkedin_img.png";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 
@@ -129,6 +130,40 @@ let projectCardsList = [
           );
         })
       }
+    </div>
+  </Section>
+
+  <Section id="aboutme" title="About Me">
+    <div class="flex gap-3xl md:gap-5xl flex-col-reverse md:flex-row">
+      <div class="flex-2 mb-5xl md:mb-3xl">
+        <TypographyP>
+          I am a UX/Product designer passionate about blending creativity with
+          problem‑solving to craft intuitive digital experiences. My training in
+          modern web development and user experience principles provides a
+          strong technical foundation, enabling me to design with feasibility in
+          mind and collaborate effectively with cross‑functional teams.
+        </TypographyP>
+        <TypographyP>
+          Before transitioning into design, I worked as a mental health nurse,
+          collaborating daily with psychiatrists and psychologists to analyze
+          patient behavior. This experience sharpened my ability to observe,
+          empathize, and understand human needs, skills I now apply directly to
+          creating user‑centered solutions.
+        </TypographyP>
+        <TypographyP>
+          In my free time, you’ll often find me soaking up the sun with a book
+          or exploring new food spots.
+        </TypographyP>
+      </div>
+      <div class="flex-1 flex justify-center items-start">
+        <div class="md:max-w-[280px] mt-3xl md:mt-0 rounded overflow-hidden">
+          <img
+            class="aspect-square object-cover"
+            src={linkedin_img.src}
+            alt="linkedin image"
+          />
+        </div>
+      </div>
     </div>
   </Section>
 </Layout>

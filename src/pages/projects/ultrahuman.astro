@@ -99,8 +99,8 @@ const constraintsItems = [
       "Proposed success metrics defined: including retention and engagement during meal logging",
       "Target adoption metrics established: feature comprehension and adoption time",
     ]}
-    col1={[ "timeline", "context", "problem", "goals"]}
-    col2={[ "process", "prototype", "tools", "results"]}
+    col1={["context", "timeline", "problem", "goals"]}
+    col2={["process", "prototype", "tools", "results"]}
   />
 
   <ProductPageSection title="Research">
@@ -151,21 +151,20 @@ const constraintsItems = [
     description="Redesigning multiple data‑heavy sections of the Ultrahuman M1 mobile experience required working within several constraints that shaped the direction and feasibility of the solutions. These limitations influenced what information could be shown, how it could be structured, and the level of detail that could be surfaced on mobile."
   >
     <TypographyList list={constraintsItems} />
-
   </ProductPageSection>
-  
-    <ProductPageSection
-      title="User Journey Map"
-      description="This journey maps how users input and monitor data within the Ultrahuman app, highlighting their actions, difficulties, and pain points, and then correlating these issues with the solutions proposed in earlier stages."
-    >
-      <TypographyH3>Takeaways</TypographyH3>
-      <TypographyP>
-        Based on the user journey map, we identified several key insights that
-        will inform our design decisions.
-      </TypographyP>
-    </ProductPageSection>
-  
-    <ImageSection src={journeyMap.src} alt="Current Journey" />
+
+  <ProductPageSection
+    title="User Journey Map"
+    description="This journey maps how users input and monitor data within the Ultrahuman app, highlighting their actions, difficulties, and pain points, and then correlating these issues with the solutions proposed in earlier stages."
+  >
+    <TypographyH3>Takeaways</TypographyH3>
+    <TypographyP>
+      Based on the user journey map, we identified several key insights that
+      will inform our design decisions.
+    </TypographyP>
+  </ProductPageSection>
+
+  <ImageSection src={journeyMap.src} alt="Current Journey" />
 
   <ProductPageSection
     title="Product Hypothesis"
