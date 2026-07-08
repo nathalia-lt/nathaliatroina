@@ -6,16 +6,33 @@ import ScrollTopButton from "../components/ScrollTopButton";
 
 const { title = "Nathalia Troina", scrollTopButton = true } = Astro.props;
 ---
-<!-- aqui eu adicionei og image e o link canonical -->
-<!doctype html>
+
+<!-- aqui eu adicionei og image e o link canonical --><!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    
+
+    <link rel="icon" href="/nathaliatroina/icons/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/nathaliatroina/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/nathaliatroina/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/nathaliatroina/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/nathaliatroina/site.webmanifest" />
+
     <!-- links para fontes	 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://gstatic.com" crossorigin />
@@ -55,11 +72,13 @@ const { title = "Nathalia Troina", scrollTopButton = true } = Astro.props;
     </script>
 
     <script is:inline>
-      const theme = localStorage.getItem('theme') 
-        ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.classList.toggle('dark', theme === 'dark');
+      const theme =
+        localStorage.getItem("theme") ??
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
+      document.documentElement.classList.toggle("dark", theme === "dark");
     </script>
-
   </head>
   <body class="">
     <!-- tudo que exige um JS no astro, tem que colocar o client:load -->
