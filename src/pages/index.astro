@@ -4,6 +4,7 @@ import Header from "../components/Header.jsx";
 import { Button } from "@/components/ui/Button";
 import Section from "@/components/Section";
 import Footer from "@/components/Footer.jsx";
+import SEO from "@/components/SEO.astro";
 
 import {
   TypographyH1,
@@ -80,7 +81,18 @@ let projectCardsList = [
 ];
 ---
 
-<Layout title="Nathalia Troina | Product Designer & UX/UI Designer in NYC" scrollTopButton={false}>
+<Layout
+  title="Nathalia Troina | Product Designer & UX/UI Designer in NYC"
+  scrollTopButton={false}
+>
+  <Fragment slot="seo">
+    <SEO
+      title="Nathalia Troina | Product Designer & UX/UI Designer in NYC"
+      description="Descrição da minha página"
+      url="https://nathalia-lt.github.io/nathaliatroina/"
+    />
+  </Fragment>
+
   <!-- Hero section -->
   <!-- aqui nessa classe eu fiz o "media-query" -->
 

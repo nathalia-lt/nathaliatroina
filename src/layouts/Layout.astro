@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ScrollTopButton from "../components/ScrollTopButton";
 
-const { title = "Astro Basics", scrollTopButton = true } = Astro.props;
+const { title = "Nathalia Troina", scrollTopButton = true } = Astro.props;
 ---
 <!-- aqui eu adicionei og image e o link canonical -->
 <!doctype html>
@@ -12,17 +12,17 @@ const { title = "Astro Basics", scrollTopButton = true } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta property="og:image"
-      content="https://nathalia-lt.github.io/nathaliatroina/og-image.jpg" />
-    <link rel="canonical" href="https://nathalia-lt.github.io/nathaliatroina/" />
+    
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
-    <!-- coloquei links para fontes	 -->
+    
+    <!-- links para fontes	 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://gstatic.com" crossorigin />
     <link href="https://googleapis.com" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+
+    <slot name="seo" />
 
     <!-- Clarity Analytics -->
     <script type="text/javascript">
