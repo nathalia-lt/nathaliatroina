@@ -17,7 +17,7 @@ function Header() {
   return (
     <header className="bg-background border-b border-border flex items-center justify-between py-2 px-sm md:px-3xl">
       <a href="/nathaliatroina" className="">
-        <img src={logo.src} alt="Logo" className="h-10 w-10 dark:brightness-0 dark:invert" />
+        <img src={logo.src} alt="Nathalia Troina logo" className="h-10 w-10 dark:brightness-0 dark:invert" />
       </a>
       <div className="flex gap-0 md:gap-2xl items-center">
       <ThemeToggle client:load />
