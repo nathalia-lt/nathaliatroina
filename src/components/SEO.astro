@@ -3,6 +3,7 @@ const {
   title,
   description,
   image = "https://nathalia-lt.github.io/nathaliatroina/og-image.png",
+  logo = "https://nathalia-lt.github.io/nathaliatroina/favicon.svg",
   url = Astro.url.href,
 } = Astro.props;
 
@@ -21,6 +22,8 @@ const canonicalUrl = url.endsWith("/") ? url.slice(0, -1) : url;
 <meta property="og:description" content={description} />
 <meta property="og:image" content={image} />
 <meta property="og:url" content={url} />
+<meta property="og:logo" content={logo} />
+        
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
