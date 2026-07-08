@@ -1,0 +1,29 @@
+---
+const {
+  title,
+  description,
+  image = "/og-image.jpg",
+  url = Astro.url.href,
+} = Astro.props;
+
+const canonicalUrl = url.endsWith("/") ? url.slice(0, -1) : url;
+// ou const canonical = astro.url.href.replace(/\/$/, "");  // remove trailing slash if present
+---
+
+<title>{title}</title>
+
+<meta name="description" content={description} />
+
+<link rel="canonical" href={canonicalUrl} />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+<meta property="og:url" content={url} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+
