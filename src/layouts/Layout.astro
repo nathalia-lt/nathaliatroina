@@ -5,6 +5,19 @@ import Header from "../components/Header";
 import ScrollTopButton from "../components/ScrollTopButton";
 
 const { title = "Nathalia Troina", scrollTopButton = true } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Nathalia Troina",
+  "jobTitle": "Product Designer",
+  "description": "Product Designer based in NYC",
+  "url": "https://nathalia-lt.github.io/nathaliatroina/",
+  "sameAs": [
+    "https://linkedin.com/in/nathaliatroina",
+    "https://github.com/nathalia-lt"
+  ]
+};
 ---
 
 <!-- aqui eu adicionei og image e o link canonical --><!doctype html>
@@ -38,6 +51,8 @@ const { title = "Nathalia Troina", scrollTopButton = true } = Astro.props;
     <link rel="preconnect" href="https://gstatic.com" crossorigin />
     <link href="https://googleapis.com" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
+
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
 
     <slot name="seo" />
 
