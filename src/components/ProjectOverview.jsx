@@ -53,7 +53,7 @@ const RenderText = ({text}) => {
 const RenderCol = ({colItems, data}) => {
 
   const renderItem = (item, index) => {
-    console.log(item, index)
+
     switch (item) {
 
       case 'timeline':
@@ -167,7 +167,10 @@ const RenderCol = ({colItems, data}) => {
   <>
 
     {colItems.map((item, index) => (
-      renderItem(item, index))
+      <div key={index}>
+        {renderItem(item, index)}
+      </div>
+    )
     )}
    </> 
   )

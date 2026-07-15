@@ -90,9 +90,9 @@ const constraintsItems = [
   />
 
   <ProjectOverview
-    timeline="3 months"
-    context="The health market, specifically smart rings like ultrahuman, Oura ring, and RingConn, represents a revolution in how we monitor our well-being. However, there is a significant opportunity to adapt and evolve this technology to better meet users' needs and realities."
-    problem="Data Interpretation: We believe users <strong> struggle to understand the practical meaning of the data collected by the ring </strong> because the metrics are presented in a technical and decontextualized manner, resulting in low continuous engagement with the app."
+  timeline="3 months"
+  context="The health market, specifically smart rings like ultrahuman, Oura ring, and RingConn, represents a revolution in how we monitor our well-being. However, there is a significant opportunity to adapt and evolve this technology to better meet users' needs and realities."
+  problem="Data Interpretation: We believe users <strong> struggle to understand the practical meaning of the data collected by the ring </strong> because the metrics are presented in a technical and decontextualized manner, resulting in low continuous engagement with the app."
     goals={[
       "Design the dashboard with a focus on the practical meaning of the data.",
       "Implement a layered visualization system (from simple to detailed).",
@@ -107,7 +107,7 @@ const constraintsItems = [
       "Proposed success metrics defined: including retention and engagement during meal logging",
       "Target adoption metrics established: feature comprehension and adoption time",
     ]}
-    col1={["context", "timeline", "problem", "goals"]}
+    col1={["timeline", "context", "problem", "goals"]}
     col2={["process", "prototype", "tools", "results"]}
   />
 
@@ -132,11 +132,11 @@ const constraintsItems = [
   <ImageSection src={CompetitorAnalysis.src} alt="Competitive analysis" />
 
   <UserInterviews
-    description="Conducted qualitative interview with 5 individuals who wear wearbles, who are health-conscious professional and fitness enthusiasts, especially those aged 18-44 years old."
+    description="Conducted qualitative interview with 5 individuals who wear wearbles, who are health-conscious professional and fitness enthusiasts, especially those aged 18-44 years old. Expecting to hear about features they wanted. Instead, I heard about features they'd stopped trusting."
     quotes={[
       "I check HRV and sleep stages. It helps me plan my classes and personal practice.",
       "I log meals sometimes. But it’s hard to find what I’ve logged before, and the interface feels busy.",
-      "when the data feels too technical or does not change much, I lose interest.",
+      "when the data feels too technical or doesn’t change much, I lose interest.",
     ]}
     findings={[
       "Users often feel confused by technical metrics like HRV, recovery scores.",
@@ -256,6 +256,8 @@ const constraintsItems = [
   />
 
   <ProductPageSection>
+    <TypographyP>With the markers screen rebuilt around clarity, the next question was consistency, did the rest of the dashboard speak the same language?</TypographyP>
+    <br />
     <TypographyH3
       >Streamlining Meal Tracking for Better Readability and Smarter Recall</TypographyH3
     >
@@ -342,7 +344,7 @@ const constraintsItems = [
   <ImpactSection
     client:visible
     title="Measure Success"
-    description="If this were a product designed by Ultrahuman and launched to the public, I would assume that they would measure its success in the following way:"
+    description="Design decisions are only as good as the metrics that validate them. Here's how I'd define success for this redesign — and why each metric ties back to the core problem: users who stop trusting their own data."
     impacts={[
       {
         icon: "trending",
@@ -377,7 +379,6 @@ const constraintsItems = [
   >
     <TypographyList
       list={[
-        "I learned different ways where user retention and engagement can be improved, and from online research. I found out the following: Gamification, push notifications and emails.",
         "By adding color, I emphasized key data points, making it easier for users to quickly interpret the information.",
         "Take in consideration the content, intent, constrains and outcomes when designing visualizations.",
         "The purpose of a graphic is to display the change of a variable over time.",

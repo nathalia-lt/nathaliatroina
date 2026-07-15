@@ -1,38 +1,55 @@
 import React from 'react';
-import {TipographyP} from '@/components/Typography';
+import {TypographyP} from '@/components/ui/Typography';
+import { cn } from "@/lib/utils.js";
 
-export default function ChatBubble({ message, isUser }) {
+export default function ChatBubble({ message, isUser = false, name=null, avatarURL }) {
+
   return (
-    <div className={`chat-bubble ${isUser ? 'user' : 'assistant'}`}>
-      <TypographyP>{message}</TypographyP>
-    </div>
+    <div className="flex flex-col gap-xs px-4 pt-2 pb-1">
+      {/* <!-- Mensagem Recebida (Esquerda) --> */}
+      {!isUser && (
+      <div className="flex items-start flex-col gap-2xs max-w-[80%]">
+        <div className="bg-neutral-400 text-neutral-800 rounded-2xl rounded-bl-none px-4 py-2 text-sm shadow-xs">
+            <TypographyP>{message}</TypographyP>
+        </div> 
+        {name && (
+        <div className="mb-sm">
+          <TypographyP className="text-xs text-neutral-700">{name}</TypographyP>
+        </div> 
+        )}
+      </div>
+      )}
+      
+
+      {/* <!-- Mensagem Enviada (Direita) --> */}
+      {isUser && (
+        <div className="flex items-end flex-col gap-2xs max-w-[80%] self-end">
+        <div className="bg-tertiary-500 text-white rounded-2xl rounded-br-none px-4 py-2 text-sm shadow-xs">
+          <TypographyP>{message}</TypographyP>
+        </div>
+        {name &&(
+          <div className="mb-sm">
+            <TypographyP className="text-xs text-neutral-700">{name}</TypographyP>  
+          </div>
+        )}
+      </div>
+      )}
+
+    </div>  
   );
 }
 
-export default function ChatBubble({ message, isUser, avatarURL }) {
-  return (
-    <div class="shrink-0">
-    <img 
-      src={avatarURL || defaultAvatar} 
-      alt="Avatar" 
-      class="w-8 h-8 rounded-full object-cover shadow-xs border border-gray-100"
-    />
-  </div>
-    <div class="flex flex-col gap-4 p-4 max-w-md mx-auto bg-gray-50 rounded-2xl shadow-sm">
-  {/* <!-- Mensagem Recebida (Esquerda) --> */}
-  <div class="flex items-end gap-2 max-w-[80%]">
-    <div class="bg-gray-200 text-gray-800 rounded-2xl rounded-bl-none px-4 py-2 text-sm shadow-xs">
-        <TipographyP>{message}</TipographyP>
-    </div>
-  </div>
-
-  {/* <!-- Mensagem Enviada (Direita) --> */}
-  <div class="flex items-end gap-2 max-w-[80%] self-end">
-    <div class="bg-blue-600 text-white rounded-2xl rounded-br-none px-4 py-2 text-sm shadow-xs">
-      <TypographyP>{message}</TypographyP>
-    </div>
-  </div>
-
-</div>
-  );
+export function ChatGroup({chatItems, className}) {
+  return (<div className={cn("mx-auto mt-lg bg-neutral-200 rounded-2xl shadow-sm py-lg", className)}>
+    {
+      chatItems.map((item, index) => (
+        <ChatBubble
+          key={index}
+          message={item.message}
+          name={item?.name}
+          isUser={item?.isUser}
+        />
+      ))
+    }
+  </div>)
 }

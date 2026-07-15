@@ -4,6 +4,7 @@ import Section from "@/components/Section";
 import InsightBlock from "../components/InsightsBlock.tsx";
 import Footer from "../components/Footer.jsx";
 import SurveyCardsContainer from "../components/SurveyCardsContainer.jsx";
+import { ChatGroup } from "@/components/Chatbubble.jsx";
 
 import {
   TypographyH1,
@@ -16,13 +17,39 @@ import {
 
 import { Badge } from "../components/ui/Badge.jsx";
 
-
 let list = [
   "Design Principle 1: User-Centered Design",
   "Design Principle 2: Consistency",
   "Design Principle 3: Accessibility",
   "Design Principle 4: Simplicity",
   "Design Principle 5: Feedback",
+];
+
+const chatItems = [
+  {
+    message: "Hello, how can I assist you today?",
+    name: "Agent",
+    isUser: false,
+  },
+  {
+    message: "I need help with my account.",
+    isUser: true,
+    name: "User",
+  },
+  {
+    message: "Sure, I can help you with that. What seems to be the issue?",
+    isUser: false,
+    name: "Agent",
+  },
+  {
+    message: "I'm having trouble logging in.",
+    isUser: true,
+  },
+  {
+    message: "I'm having trouble logging in.",
+    isUser: true,
+    name: "User",
+  },
 ];
 ---
 
@@ -39,6 +66,8 @@ let list = [
 
   <Badge className="badgeCustomColors">UX Design</Badge>
 
+  <ChatGroup className="max-w-[600px]" chatItems={chatItems} />
+
   <TypographyBlockquote author="Steve Jobs">
     Design is not just what it looks like and feels like. Design is how it
     works.
@@ -48,61 +77,69 @@ let list = [
   <!-- radius -->
   <!-- so class pq nao é um componente react -->
   <div class="flex gap-4">
-    <span class="w-10 h-10  rounded-sm border-4">4px</span>
-    <span class="w-10 h-10  rounded-md  border-4">6px</span>
-    <span class="w-10 h-10  rounded-lg border-4">8px</span>
-    <span class="w-10 h-10  rounded-xl  border-4">12px</span>
-    <span class="w-10 h-10  rounded-2xl border-4">16px</span>
-    <span class="w-10 h-10  rounded-3xl border-4">24px</span>
-    <span class="w-10 h-10  rounded-4xl border-4">32px</span>
+    <span class="w-10 h-10 rounded-sm border-4">4px</span>
+    <span class="w-10 h-10 rounded-md border-4">6px</span>
+    <span class="w-10 h-10 rounded-lg border-4">8px</span>
+    <span class="w-10 h-10 rounded-xl border-4">12px</span>
+    <span class="w-10 h-10 rounded-2xl border-4">16px</span>
+    <span class="w-10 h-10 rounded-3xl border-4">24px</span>
+    <span class="w-10 h-10 rounded-4xl border-4">32px</span>
   </div>
-  
 
   <!--  -->
   <div class="flex gap-4 mt-4">
-    <span class=" h-10 px-4 py-2 text-secondary-500 bg-secondary-50"><div>secondary50</div></span>
-    <span class="w-10 h-10 bg-secondary-100 "></span>
-    <span class="w-10 h-10 bg-secondary-200 "></span>
+    <span class="h-10 px-4 py-2 text-secondary-500 bg-secondary-50"
+      ><div>secondary50</div></span
+    >
+    <span class="w-10 h-10 bg-secondary-100"></span>
+    <span class="w-10 h-10 bg-secondary-200"></span>
     <span class="w-10 h-10 bg-red-500 rounded-lg"></span>
     <span class="w-10 h-10 bg-red-500 rounded-xl"></span>
     <span class="w-10 h-10 bg-red-500 rounded-2xl"></span>
     <span class="w-10 h-10 bg-red-500 rounded-3xl"></span>
     <span class="w-10 h-10 bg-red-500 rounded-4xl"></span>
   </div>
-  
-  <InsightBlock title="Design Principle 1: User-Centered Design"
+
+  <InsightBlock
+    title="Design Principle 1: User-Centered Design"
     description="User-centered design is a design philosophy that places the needs, preferences, and limitations of the end-users at the forefront of the design process. It involves understanding the users through research, testing, and feedback, and using that understanding to inform design decisions. The goal is to create products that are intuitive, efficient, and enjoyable for the users, ultimately enhancing their overall experience."
-    icon="rocket" />
-  
-  
-  <InsightBlock title="Design Principle 1: User-Centered Design"
+    icon="rocket"
+  />
+
+  <InsightBlock
+    title="Design Principle 1: User-Centered Design"
     description="User-centered design is a design philosophy that places the needs, preferences, and limitations of the end-users at the forefront of the design process. It involves understanding the users through research, testing, and feedback, and using that understanding to inform design decisions. The goal is to create products that are intuitive, efficient, and enjoyable for the users, ultimately enhancing their overall experience."
-    icon="bulb" />
+    icon="bulb"
+  />
 
   <Section title="Survey Cards">
-    <TypographyP>This component displays a collection of survey cards, each representing a different survey or questionnaire. Users can interact with the cards to view survey details, participate in surveys, and track their progress. The design emphasizes clarity and ease of use, ensuring that users can quickly understand the purpose of each survey and how to engage with it.</TypographyP>
+    <TypographyP
+      >This component displays a collection of survey cards, each representing a
+      different survey or questionnaire. Users can interact with the cards to
+      view survey details, participate in surveys, and track their progress. The
+      design emphasizes clarity and ease of use, ensuring that users can quickly
+      understand the purpose of each survey and how to engage with it.</TypographyP
+    >
     <SurveyCardsContainer
       cards={[
         {
-          title:"10%",
-          description: "Texto de descrição"
+          title: "10%",
+          description: "Texto de descrição",
         },
         {
-          title:"20%",
-          description: "Texto de descrição"
+          title: "20%",
+          description: "Texto de descrição",
         },
         {
-          title:"30%",
-          description: "Texto de descrição"
+          title: "30%",
+          description: "Texto de descrição",
         },
         {
-          title:"40%",
-          description: "Texto de descrição"
+          title: "40%",
+          description: "Texto de descrição",
         },
       ]}
     />
-    </Section>
-    <Footer />
+  </Section>
+  <Footer />
 </Layout>
-
-  

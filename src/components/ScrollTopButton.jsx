@@ -2,7 +2,6 @@ import { IconChevronUp } from '@tabler/icons-react';
 
 export default function ScrollTopButton (){
     const scrollToTop = () => {
-        console.log('clicked')
         window.scrollTo({
             top: 0,
             behavior: 'smooth'

@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/Typography";
 import ImpactSection from "@/components/ImpactSection";
 import InsightsBlock from "@/components/InsightsBlock";
+import { ChatGroup } from "@/components/Chatbubble.jsx";
 import ImageSection from "@/components/ImageSection";
 import BeforeAfterToggle from "@/components/BeforeAfterToggle";
 import SEO from "@/components/SEO.astro";
@@ -26,6 +27,7 @@ import filterafter from "@/assets/projects/RealEstate/filter_after.png";
 import aptafter from "@/assets/projects/RealEstate/apt_after.png";
 import filterpage from "@/assets/projects/RealEstate/filterpage.png";
 import hero_img from "@/assets/projects/RealEstate/hero.png";
+import opportunity_tree from "@/assets/projects/RealEstate/opportunity_solution_tree.png";
 
 const insightsBlockItems = [
   {
@@ -43,6 +45,29 @@ const insightsBlockItems = [
       "When I find a property that interests me, I want to initiate a direct, context-aware conversation with a specialized broker, so that I can get immediate answers without having to repeat the property details or fill out long, impersonal forms.",
     icon: "rocket",
   },
+];
+
+
+const chatItems = [
+  {
+    message: "A clean contact form is the standard. Name, email, message. Let's keep it simple.",
+    name: "Assumption",
+    isUser: false,
+  },
+  {
+    message: "I never fill those forms. It feels like it goes into a blank hole.",
+    isUser: true,
+  },
+  {
+    message: "I'd rather send a WhatsApp message than fill three fields and wait for a reply.",
+    isUser: true,
+  },
+  {
+    message: "The last time I used a form like this, no one responded. I just called a broker I already knew.",
+    isUser: true,
+    name: "what users actually said",
+  },
+  
 ];
 ---
 
@@ -79,7 +104,21 @@ const insightsBlockItems = [
       "Developed a dynamic filtering system tailored to high-end real estate searches.",
       "Established clear success metrics for user engagement, search efficiency, and lead quality.",
     ]}
+    col1={["timeline", "context", "problem", "goals"]}
+    col2={["process", "prototype", "tools", "results"]}
   />
+
+
+
+
+  <productPageSection
+    title="41% of real estate agency interactions end in dropouts."
+    description="That single number tells you almost everything about how broken the discovery-to-contact journey is in real estate. Users find a property they like — then hit a wall of generic filters, no neighborhood context, and a contact form that feels like sending a message into the void."
+  >
+  </productPageSection>
+
+  
+  
 
   <ProductPageSection
     sectionClassName="mb-0"
@@ -93,20 +132,17 @@ const insightsBlockItems = [
         "Real estate agencies in Brazil take over six hours to respond to clients interested in renting properties.",
         "Post-contact, Plaza's research revealed that only 40.74% of contacts received a follow-up after initial disengagement.",
         "The real estate market was valued at US$ 9.8 trillion in 2023, with projected growth to US$ 13.9 trillion by 2030, at a CAGR of 5.8% from 2024 to 2030.",
+        "Brazil has over 600,000 registered brokers — the 2nd largest market in the world."
       ]}
     />
     <TypographyH3 className="mt-4xl">Competitive Analysis</TypographyH3>
-    <TypographyP
-      >To understand the current competitors for real estate-focused
-      applications and identify their strengths and uncover areas for
-      improvement, I conducted a competitor analysis covering three direct and
-      two indirect competitors.</TypographyP
+    <TypographyP>Every competitor I analyzed made the same trade-off: scale over specificity.</TypographyP
     >
     <TypographyList
       list={[
-        "Large platforms like QuintoAndar and ZAP prioritize volume over curation. There is a clear opportunity to serve high-end users who feel overwhelmed by generic filters and unverified listings.",
-        "Information noise (Loft and OLX): High-drop-off due to unverified listing or lack of deep neighborhood context",
-        "Features highly limited and generic filters that fail to accommodate the specific attributes.",
+        "QuintoAndar and ZAP optimize for volume, leaving high-end users overwhelmed by generic filters and unverified listings.",
+        "Loft and OLX generate information noise — high drop-off driven by unverified listings and zero neighborhood context.",
+        "Across the board, filtering systems were built for the mass market, not for buyers with specific, non-negotiable criteria.",
       ]}
     />
   </ProductPageSection>
@@ -117,11 +153,33 @@ const insightsBlockItems = [
   />
 
   <ProductPageSection
+    title="User insights"
+    description="The primary group, Property Seekers, was chosen due to time constraints, focusing on high‑income users aged 28–45 who searched for premium properties in the past six months. This includes both those who completed a purchase or rental and those who abandoned the process, with the latter offering the most valuable insight into where trust broke. A few participants relocating from another city or country add depth, as they rely heavily on neighborhood context. Although a secondary group of Brokers could validate lead quality, the most insight-rich choice remains the seekers who dropped off."
+>
+    <TypographyP>User feedback revealed that the real issue was deeper: users were leaving the platform mid-decision to research neighborhood amenities elsewhere, and the generic contact forms were not meeting their needs for direct, context-aware communication</TypographyP>
+    <ChatGroup  chatItems={chatItems} />
+    
+  </ProductPageSection>
+
+  <ProductPageSection
     client:visible
     title="Problem Statement"
     variant="large"
     description="How might we transform the fragmented property search into a seamless, data-rich discovery journey <mark>that reduces platform exit rates</mark> and leverages a context-aware message bridge to <mark>increase qualified lead generation</mark>?"
   />
+
+  <ProductPageSection
+    title="From Insights to Decisions"
+    description="Between the 41% drop-off rate and the final designs below, there was a step I had to make visible to myself before I could make it visible to anyone else: turning a business outcome, three distinct user pain points, and my own instincts about what might work into decisions I could actually defend. This is that step, the opportunities I identified, the solutions I considered for each one, and, where I had the chance to test, what the data told me before I moved forward."
+  >
+  </ProductPageSection>
+  <ImageSection
+    src={opportunity_tree.src}
+    alt="Real Estate Opportunity Solution Tree"
+    className="mt-0"
+  />
+
+
 
   <ProductPageSection
     title="Jobs to be done"
@@ -137,23 +195,11 @@ const insightsBlockItems = [
     </div>
   </ProductPageSection>
 
-  <ProductPageSection title="Design Solutions">
-    <TypographyH3>Integrating micro-location data</TypographyH3>
-    <TypographyP>
-      We believe that integrating micro-location data and neighborhood insights
-      directly into the property page will eliminate the need for external
-      searches, thereby <strong
-        >increasing on-page retention and user trust</strong
-      >.
-    </TypographyP>
-    <TypographyH3 className="mt-lg">Context-aware messaging system</TypographyH3
-    >
-    <TypographyP
-      >We believe that replacing generic contact forms with a context-aware
-      messaging system will significantly <strong
-        >increase the quality of leads</strong
-      > by providing brokers with immediate property-specific data.</TypographyP
-    >
+  <ProductPageSection title="Design Hypotheses">
+    <TypographyH3>Micro-location data, built into the page itself</TypographyH3>
+    <TypographyP>Users were leaving the platform mid-decision, opening five new tabs to check schools, safety, and transit before coming back, if they came back at all. Embedding that context directly into the property page removes the reason to leave.</TypographyP>
+    <TypographyH3 className="mt-lg">A form that already knows what you are asking for</TypographyH3>
+    <TypographyP>Generic contact forms make users repeat information the platform already has, which property, which details, what they want to know. I redesigned the form so the message field arrives pre-filled with the property's context; the user only has to add their name, email, and hit send. For users who prefer speaking to a broker directly, WhatsApp is offered as a second, faster contact channel, meeting the market where it already communicates.</TypographyP>
   </ProductPageSection>
   <BeforeAfterToggle
     beforeImage={aptbefore.src}
@@ -170,9 +216,13 @@ const insightsBlockItems = [
       >We believe that engineering a specialized dynamic filtering system
       tailored to real estate platforms will allow users to refine searches
       based on high-end criteria, thereby <strong
-        >reducing time-to-discovery and increasing the search success rate</strong
-      >.
-    </TypographyP>
+        >reducing time-to-discovery and increasing the search success rate</strong>.</TypographyP>
+    <TypographyH3 className="mt-lg">Tags</TypographyH3>
+    <TypographyP
+      >We believe that integrating contextual property amenity tags (e.g.,
+      gym, pool, play area) directly into overview cards will enhance
+      immediate scannability and <strong>increase click-through rates on
+      high-end listings</strong>.</TypographyP>    
   </ProductPageSection>
     <BeforeAfterToggle
     beforeImage={filterbefore.src}
@@ -188,31 +238,31 @@ const insightsBlockItems = [
   <ImpactSection
     client:visible
     title="Measuring Impact"
-    description="To evaluate the effectiveness of the redesigned experience, we defined clear success indicators aligned with engagement, search efficiency, and lead quality. These metrics were modeled using analytics benchmarks and industry patterns for real estate platforms."
+    description="The platform is live, and I've implemented Google Analytics and Microsoft Clarity to track real user behavior against the metrics below. The data collection window is still early, so the numbers aren't in yet, but here's exactly what I'm measuring and why each metric ties back to the core problem:"
     impacts={[
       {
         icon: "map",
         title: "User Retention",
         description:
-          "Optimized engagement by integrating micro-location data directly into property pages. This led to an increase in average session duration and a reduction in platform exit points.",
+          "Session duration and platform exit rate on property pages, to test whether embedding micro-location data actually keeps users on-page instead of tab-switching to research neighborhoods elsewhere.",
       },
       {
         icon: "message",
-        title: "Lead Optimization",
+        title: "Lead Quality",
         description:
-          "The context‑aware message bridge is designed to improve lead relevance by capturing property‑specific intent before the broker interaction.",
+          "Form completion rate and time-to-broker-response, to test whether the pre-filled message reduces the friction that was causing drop-off in traditional forms.",
       },
       {
         icon: "chart",
         title: "Search Efficiency",
         description:
-          "The dynamic filtering system aims to reduce friction and accelerate discovery for high‑end listings.",
+          "Time-to-first-saved-listing, to test whether the new filtering system actually shortens the path to a relevant match.",
       },
       {
         icon: "tags",
-        title: "Visual Scanning",
+        title: "Channel Efficiency",
         description:
-          "Introduced contextual property amenity tags (e.g., gym, pool, play area) directly into overview cards. This enhanced immediate scannability and drove a 25% increase in click-through rates on high-end listings.",
+          "% of users choosing WhatsApp vs. the in-app form, which will tell me whether the cultural bet on WhatsApp was the right call — or whether the pre-filled form alone was enough.",
       },
     ]}
     nextSteps={[

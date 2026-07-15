@@ -30,14 +30,14 @@ export default function ImpactSection({ title, description="", variant="default"
                     ))}
                 </div>
                 
-
-                <TypographyH4>Next Steps</TypographyH4>
-                <TypographyList className="mb-sm" list={nextSteps} />
-                
                 <div className="mt-3xl">
                     <TypographyH4>Reflections</TypographyH4>
                     {children}
                 </div>
+
+                <TypographyH4>Next Steps</TypographyH4>
+                <TypographyList className="mb-sm" list={nextSteps} />
+                
             
             </LayoutGrid>
         
