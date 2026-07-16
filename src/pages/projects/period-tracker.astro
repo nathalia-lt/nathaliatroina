@@ -74,7 +74,7 @@ const insightsBlockItems = [
 
     <ProjectOverview
       timeline="7 months"
-      context="Pipoca Ágil is an innovative initiative designed to empower early-career professionals by providing them with hands-on experience in agile teams. In this project, participants are working on a period tracker app, requested by a key stakeholder. This app is set to enhance women's health tracking and is scheduled for launch in the second half of 2026, initially targeting the Brazilian market."
+      context="Pipoca Ágil is an innovative initiative designed to empower early-career professionals by providing them with hands-on experience in agile teams. In this project, participants are working on a period tracker app, requested by a key stakeholder. The product was ready to launch. It didn't — not because the design failed, but because Brazil's LGPD (data protection law) raised compliance requirements around handling sensitive health data that the initiative wasn't equipped to resolve within our timeline."
 
       problem="People who menstruate often <strong> struggle to keep track of their cycles and related symptoms using traditional methods or overly complex apps</strong>. They need a simple, reliable, and accessible way to log and review their menstrual health data so they can better understand their cycles and plan accordingly."
       goals={[
@@ -84,10 +84,10 @@ const insightsBlockItems = [
       ]}
       process="User research, competitive analysis, survey, interviews, JTBD, MoSCoW, user testing."
       tools={["Figma", "Jira", "Maze"]}
-      results={[
-        "Successfully designed and validated the MVP of a period tracker app.",
-        "Established clear success metrics for user engagement, retention, and user satisfaction.",
-        "Created a scalable information architecture and design system to support future feature expansion.",
+        results={[
+        "Validated the MVP with real users: 87 usability score, 92% task success rate.",
+        "Grounded every decision in research: 50 interviews across the Brazilian market.",
+        "Launch-ready design — paused by LGPD compliance, not by usability or fit.",
       ]}
     />
 
@@ -260,9 +260,9 @@ const insightsBlockItems = [
 
       <ImpactSection
         client:visible
-        title="Impact and Metrics"
+        title="What We'd Still Need to Measure Post-launch"
         sucessTitle="Defining Success"
-        description="If the period tracker MVP succeeds, users will find it easier to log their menstrual health data and gain insights about their cycles, leading to better understanding and management of their menstrual health."
+        description="Usability testing tells you the product works in a lab. It doesn't tell you if people keep coming back once the compliance and infrastructure questions are resolved. These are the metrics we defined for that phase:"
         impactsTitle="Success would be measured using the following metrics:"
         impacts={[
           {
@@ -301,6 +301,7 @@ const insightsBlockItems = [
             "Collaboration and communication within the team are essential for achieving project goals.",
             "Iterative design and testing help identify and address usability issues early in the process.",
             "Agile methodology allows for flexibility and adaptability in the design process.",
+            "Design validation and product launch are two different milestones — a product can be fully validated by users and still be blocked by factors outside the design process, like regulatory compliance. Understanding that distinction changed how I think about 'done'.",
           ]}
         />
       </ImpactSection>
