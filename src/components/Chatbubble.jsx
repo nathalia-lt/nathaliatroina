@@ -24,7 +24,7 @@ export default function ChatBubble({ message, isUser = false, name=null, avatarU
       {/* <!-- Mensagem Enviada (Direita) --> */}
       {isUser && (
         <div className="flex items-end flex-col gap-2xs max-w-[80%] self-end">
-        <div className="bg-tertiary-500 text-white rounded-2xl rounded-br-none px-4 py-2 text-sm shadow-xs">
+        <div className="bg-tertiary-700 text-neutral-700 rounded-2xl rounded-br-none px-4 py-2 text-sm shadow-xs">
           <TypographyP>{message}</TypographyP>
         </div>
         {name &&(

@@ -30,9 +30,9 @@ function Header() {
               <NavigationMenuTrigger className="w-5xl h-3xl justify-center">Work</NavigationMenuTrigger>
               <NavigationMenuContent data-test="EU" className="-mt-1">
                   <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/nathaliatroina/projects/ultrahuman'>Ultrahuman</NavigationMenuLink>
-                  <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/nathaliatroina/projects/design-system'>Design System</NavigationMenuLink>
                   <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/nathaliatroina/projects/real-estate'>Real Estate</NavigationMenuLink>
                   <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/nathaliatroina/projects/period-tracker'>Period Tracker</NavigationMenuLink>
+                  <NavigationMenuLink className="w-32 hover:bg-neutral-300 hover:rounded-none" href='/nathaliatroina/projects/design-system'>Design System</NavigationMenuLink>
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
