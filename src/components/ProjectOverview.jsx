@@ -151,7 +151,7 @@ const RenderCol = ({colItems, data}) => {
           <>
           {data.results.length > 0 && (
           <>
-            <TypographyH4>Results</TypographyH4>
+            <TypographyH4>Outcomes</TypographyH4>
             <div>
               <TypographyList className="mt-xs mb-xl" list={data.results} />
             </div>
